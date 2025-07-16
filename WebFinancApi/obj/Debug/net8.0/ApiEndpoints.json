@@ -1,0 +1,18 @@
+[
+  {
+    "ContainingType": "Financ.Api.Controllers.DebitosController",
+    "Method": "CadastraDebito",
+    "RelativePath": "api/debito/cadastro",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "debito",
+        "Type": "Financ.Application.DTOs.Input.DebInDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

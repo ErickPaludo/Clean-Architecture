@@ -1,0 +1,80 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Financ.Api",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/debito/cadastro": {
+      "post": {
+        "tags": [
+          "Debitos"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DebInDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DebInDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DebInDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "DebInDTO": {
+        "required": [
+          "dthrReg",
+          "status",
+          "titulo",
+          "valor"
+        ],
+        "type": "object",
+        "properties": {
+          "titulo": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
+          },
+          "descricao": {
+            "maxLength": 100,
+            "type": "string",
+            "nullable": true
+          },
+          "valor": {
+            "maximum": 99999999,99,
+            "minimum": 0,01,
+            "type": "number",
+            "format": "double"
+          },
+          "dthrReg": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

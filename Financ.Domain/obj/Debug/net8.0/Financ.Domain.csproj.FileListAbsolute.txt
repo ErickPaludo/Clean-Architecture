@@ -1,0 +1,11 @@
+C:\Fullsoft\Estudos\Financ\Financ.Domain\bin\Debug\net8.0\Financ.Domain.deps.json
+C:\Fullsoft\Estudos\Financ\Financ.Domain\bin\Debug\net8.0\Financ.Domain.dll
+C:\Fullsoft\Estudos\Financ\Financ.Domain\bin\Debug\net8.0\Financ.Domain.pdb
+C:\Fullsoft\Estudos\Financ\Financ.Domain\obj\Debug\net8.0\Financ.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Fullsoft\Estudos\Financ\Financ.Domain\obj\Debug\net8.0\Financ.Domain.AssemblyInfoInputs.cache
+C:\Fullsoft\Estudos\Financ\Financ.Domain\obj\Debug\net8.0\Financ.Domain.AssemblyInfo.cs
+C:\Fullsoft\Estudos\Financ\Financ.Domain\obj\Debug\net8.0\Financ.Domain.csproj.CoreCompileInputs.cache
+C:\Fullsoft\Estudos\Financ\Financ.Domain\obj\Debug\net8.0\Financ.Domain.dll
+C:\Fullsoft\Estudos\Financ\Financ.Domain\obj\Debug\net8.0\refint\Financ.Domain.dll
+C:\Fullsoft\Estudos\Financ\Financ.Domain\obj\Debug\net8.0\Financ.Domain.pdb
+C:\Fullsoft\Estudos\Financ\Financ.Domain\obj\Debug\net8.0\ref\Financ.Domain.dll
