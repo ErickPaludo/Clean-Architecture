@@ -1,5 +1,5 @@
-﻿using Financ.Domain.Interfaces;
-using Financ.Domain.Interfaces.UnitOfWork;
+﻿using Financ.Application.Interfaces.Repository;
+using Financ.Application.Interfaces.Repository.UnitOfWork;
 using Financ.Infrastructure.Context;
 using Financ.Infrastructure.Repositorys;
 using Microsoft.EntityFrameworkCore;
@@ -26,12 +26,6 @@ namespace Financ.CrossCutting.IoC
             services.AddScoped<IParcelaRepository, ParcelaRepository>();
             services.AddScoped<ISaldoRepository, SaldoRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
-
-            //services.AddScoped<IProdutoRepository, ProdutoRepository>();
-            //services.AddScoped<IProdutoService, ProdutoService>();
-            //services.AddScoped<ICategoriaService, CategoriaService>();
-            //services.AddAutoMapper(typeof(DomainToDTOMappingProfile));
-
             return services;
         }
     }

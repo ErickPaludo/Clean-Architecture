@@ -1,7 +1,7 @@
 ﻿using Financ.Application.DTOs;
 using Financ.Application.DTOs.Input;
+using Financ.Application.Interfaces.Repository.UnitOfWork;
 using Financ.Domain.Entities;
-using Financ.Domain.Interfaces.UnitOfWork;
 using Financ.Infrastructure.Entity;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;

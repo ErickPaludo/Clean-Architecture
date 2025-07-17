@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Fullsoft\\Estudos\\Financ\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{2EC7AA26-704F-4DBD-A620-4863E5867F1C}|Financ.Domain\\Financ.Domain.csproj|c:\\fullsoft\\estudos\\financ\\financ.domain\\interfaces\\ibaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EC7AA26-704F-4DBD-A620-4863E5867F1C}|Financ.Domain\\Financ.Domain.csproj|solutionrelative:financ.domain\\interfaces\\ibaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{788024C1-DD73-433A-9335-5CD87F8359E5}|WebFinancApi\\Financ.Api.csproj|c:\\fullsoft\\estudos\\financ\\webfinancapi\\debitoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{788024C1-DD73-433A-9335-5CD87F8359E5}|WebFinancApi\\Financ.Api.csproj|solutionrelative:webfinancapi\\debitoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{06BABFB1-2AB0-4142-AC84-0A536306FCAA}|Financ.Application\\Financ.Application.csproj|c:\\fullsoft\\estudos\\financ\\financ.application\\dtos\\basedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{06BABFB1-2AB0-4142-AC84-0A536306FCAA}|Financ.Application\\Financ.Application.csproj|solutionrelative:financ.application\\dtos\\basedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{06BABFB1-2AB0-4142-AC84-0A536306FCAA}|Financ.Application\\Financ.Application.csproj|c:\\fullsoft\\estudos\\financ\\financ.application\\dtos\\input\\debindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{06BABFB1-2AB0-4142-AC84-0A536306FCAA}|Financ.Application\\Financ.Application.csproj|solutionrelative:financ.application\\dtos\\input\\debindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{788024C1-DD73-433A-9335-5CD87F8359E5}|WebFinancApi\\Financ.Api.csproj|c:\\fullsoft\\estudos\\financ\\webfinancapi\\debitoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{788024C1-DD73-433A-9335-5CD87F8359E5}|WebFinancApi\\Financ.Api.csproj|solutionrelative:webfinancapi\\debitoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{788024C1-DD73-433A-9335-5CD87F8359E5}|WebFinancApi\\Financ.Api.csproj|c:\\fullsoft\\estudos\\financ\\webfinancapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -74,11 +78,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "IBaseRepository.cs",
+              "DocumentMoniker": "C:\\Fullsoft\\Estudos\\Financ\\Financ.Domain\\Interfaces\\IBaseRepository.cs",
+              "RelativeDocumentMoniker": "Financ.Domain\\Interfaces\\IBaseRepository.cs",
+              "ToolTip": "C:\\Fullsoft\\Estudos\\Financ\\Financ.Domain\\Interfaces\\IBaseRepository.cs",
+              "RelativeToolTip": "Financ.Domain\\Interfaces\\IBaseRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-16T20:15:46.698Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "DebInDTO.cs",
               "DocumentMoniker": "C:\\Fullsoft\\Estudos\\Financ\\Financ.Application\\DTOs\\Input\\DebInDTO.cs",
               "RelativeDocumentMoniker": "Financ.Application\\DTOs\\Input\\DebInDTO.cs",
@@ -91,7 +108,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "CreditoConfiguration.cs",
               "DocumentMoniker": "C:\\Fullsoft\\Estudos\\Financ\\Financ.Infrastructure\\EntitiesConfiguration\\CreditoConfiguration.cs",
               "RelativeDocumentMoniker": "Financ.Infrastructure\\EntitiesConfiguration\\CreditoConfiguration.cs",
@@ -104,7 +121,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Credito.cs",
               "DocumentMoniker": "C:\\Fullsoft\\Estudos\\Financ\\Financ.Domain\\Entities\\Credito.cs",
               "RelativeDocumentMoniker": "Financ.Domain\\Entities\\Credito.cs",
@@ -117,7 +134,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Debito.cs",
               "DocumentMoniker": "C:\\Fullsoft\\Estudos\\Financ\\Financ.Domain\\Entities\\Debito.cs",
               "RelativeDocumentMoniker": "Financ.Domain\\Entities\\Debito.cs",
@@ -130,7 +147,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Saldo.cs",
               "DocumentMoniker": "C:\\Fullsoft\\Estudos\\Financ\\Financ.Domain\\Entities\\Saldo.cs",
               "RelativeDocumentMoniker": "Financ.Domain\\Entities\\Saldo.cs",
@@ -143,7 +160,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Parcela.cs",
               "DocumentMoniker": "C:\\Fullsoft\\Estudos\\Financ\\Financ.Domain\\Entities\\Parcela.cs",
               "RelativeDocumentMoniker": "Financ.Domain\\Entities\\Parcela.cs",
@@ -156,7 +173,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "EntyId.cs",
               "DocumentMoniker": "C:\\Fullsoft\\Estudos\\Financ\\Financ.Domain\\Entities\\EntityBase\\EntyId.cs",
               "RelativeDocumentMoniker": "Financ.Domain\\Entities\\EntityBase\\EntyId.cs",
@@ -169,7 +186,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "BaseDTO.cs",
               "DocumentMoniker": "C:\\Fullsoft\\Estudos\\Financ\\Financ.Application\\DTOs\\BaseDTO.cs",
               "RelativeDocumentMoniker": "Financ.Application\\DTOs\\BaseDTO.cs",
@@ -182,7 +199,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Base.cs",
               "DocumentMoniker": "C:\\Fullsoft\\Estudos\\Financ\\Financ.Domain\\Entities\\EntityBase\\Base.cs",
               "RelativeDocumentMoniker": "Financ.Domain\\Entities\\EntityBase\\Base.cs",
@@ -195,7 +212,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Fullsoft\\Estudos\\Financ\\WebFinancApi\\Program.cs",
               "RelativeDocumentMoniker": "WebFinancApi\\Program.cs",
@@ -208,20 +225,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "DebitosController.cs",
               "DocumentMoniker": "C:\\Fullsoft\\Estudos\\Financ\\WebFinancApi\\DebitosController.cs",
               "RelativeDocumentMoniker": "WebFinancApi\\DebitosController.cs",
               "ToolTip": "C:\\Fullsoft\\Estudos\\Financ\\WebFinancApi\\DebitosController.cs",
               "RelativeToolTip": "WebFinancApi\\DebitosController.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAewCUAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAMwCEAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-16T19:26:48.592Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "20250716194524_desativhafkdebito.cs",
               "DocumentMoniker": "C:\\Fullsoft\\Estudos\\Financ\\Financ.Infrastructure\\Migrations\\20250716194524_desativhafkdebito.cs",
               "RelativeDocumentMoniker": "Financ.Infrastructure\\Migrations\\20250716194524_desativhafkdebito.cs",
@@ -234,7 +251,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "DebitoConfiguration.cs",
               "DocumentMoniker": "C:\\Fullsoft\\Estudos\\Financ\\Financ.Infrastructure\\EntitiesConfiguration\\DebitoConfiguration.cs",
               "RelativeDocumentMoniker": "Financ.Infrastructure\\EntitiesConfiguration\\DebitoConfiguration.cs",
@@ -247,7 +264,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "DebitoRepository.cs",
               "DocumentMoniker": "C:\\Fullsoft\\Estudos\\Financ\\Financ.Infrastructure\\Repositorys\\DebitoRepository.cs",
               "RelativeDocumentMoniker": "Financ.Infrastructure\\Repositorys\\DebitoRepository.cs",
@@ -260,7 +277,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "BaseRepository.cs",
               "DocumentMoniker": "C:\\Fullsoft\\Estudos\\Financ\\Financ.Infrastructure\\Repositorys\\BaseRepository.cs",
               "RelativeDocumentMoniker": "Financ.Infrastructure\\Repositorys\\BaseRepository.cs",
@@ -273,7 +290,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "DependencyInject.cs",
               "DocumentMoniker": "C:\\Fullsoft\\Estudos\\Financ\\Financ.CrossCutting\\IoC\\DependencyInject.cs",
               "RelativeDocumentMoniker": "Financ.CrossCutting\\IoC\\DependencyInject.cs",

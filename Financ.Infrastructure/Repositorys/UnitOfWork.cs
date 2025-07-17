@@ -1,5 +1,5 @@
-﻿using Financ.Domain.Interfaces;
-using Financ.Domain.Interfaces.UnitOfWork;
+﻿using Financ.Application.Interfaces.Repository;
+using Financ.Application.Interfaces.Repository.UnitOfWork;
 using Financ.Infrastructure.Context;
 using System;
 using System.Collections.Generic;
@@ -11,10 +11,10 @@ namespace Financ.Infrastructure.Repositorys
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private ICreditoRepository creditoRepository;
-        private IDebitoRepository debitoRepository;
-        private IParcelaRepository parcelaRepository;
-        private ISaldoRepository saldoRepository;
+        private ICreditoRepository? creditoRepository;
+        private IDebitoRepository? debitoRepository;
+        private IParcelaRepository? parcelaRepository;
+        private ISaldoRepository? saldoRepository;
 
         private ApplicationDbContext _context;
         public UnitOfWork(ApplicationDbContext context)

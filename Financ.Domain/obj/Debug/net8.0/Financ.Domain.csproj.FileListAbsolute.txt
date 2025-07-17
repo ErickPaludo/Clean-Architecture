@@ -5,6 +5,7 @@ C:\Fullsoft\Estudos\Financ\Financ.Domain\obj\Debug\net8.0\Financ.Domain.Generate
 C:\Fullsoft\Estudos\Financ\Financ.Domain\obj\Debug\net8.0\Financ.Domain.AssemblyInfoInputs.cache
 C:\Fullsoft\Estudos\Financ\Financ.Domain\obj\Debug\net8.0\Financ.Domain.AssemblyInfo.cs
 C:\Fullsoft\Estudos\Financ\Financ.Domain\obj\Debug\net8.0\Financ.Domain.csproj.CoreCompileInputs.cache
+C:\Fullsoft\Estudos\Financ\Financ.Domain\obj\Debug\net8.0\Financ.Domain.sourcelink.json
 C:\Fullsoft\Estudos\Financ\Financ.Domain\obj\Debug\net8.0\Financ.Domain.dll
 C:\Fullsoft\Estudos\Financ\Financ.Domain\obj\Debug\net8.0\refint\Financ.Domain.dll
 C:\Fullsoft\Estudos\Financ\Financ.Domain\obj\Debug\net8.0\Financ.Domain.pdb

@@ -1,5 +1,5 @@
-﻿using Financ.Domain.Entities;
-using Financ.Domain.Interfaces;
+﻿using Financ.Application.Interfaces.Repository;
+using Financ.Domain.Entities;
 using Financ.Infrastructure.Context;
 using System;
 using System.Collections.Generic;

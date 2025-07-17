@@ -241,6 +241,9 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+              "C:\\Fullsoft\\Estudos\\Financ\\Financ.Application\\Financ.Application.csproj": {
+                "projectPath": "C:\\Fullsoft\\Estudos\\Financ\\Financ.Application\\Financ.Application.csproj"
+              },
               "C:\\Fullsoft\\Estudos\\Financ\\Financ.Domain\\Financ.Domain.csproj": {
                 "projectPath": "C:\\Fullsoft\\Estudos\\Financ\\Financ.Domain\\Financ.Domain.csproj"
               }
