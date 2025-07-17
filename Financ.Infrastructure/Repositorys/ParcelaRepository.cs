@@ -1,4 +1,4 @@
-﻿using Financ.Application.Interfaces.Repository;
+﻿using Financ.Application.Ports.Interfaces.Repository;
 using Financ.Domain.Entities;
 using Financ.Infrastructure.Context;
 using System;

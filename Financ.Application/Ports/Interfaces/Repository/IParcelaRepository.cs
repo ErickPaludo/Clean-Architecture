@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Financ.Application.Interfaces.Repository
+namespace Financ.Application.Ports.Interfaces.Repository
 {
-    public interface IDebitoRepository : IBaseRepository<Debito>
+    public interface IParcelaRepository : IBaseRepository<Parcela>
     {
     }
 }

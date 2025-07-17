@@ -1,6 +1,0 @@
-C:\Fullsoft\Estudos\Financ\Financ.Infrastructure\obj\Debug\net8.0\Financ.Infrastructure.csproj.AssemblyReference.cache
-C:\Fullsoft\Estudos\Financ\Financ.Infrastructure\obj\Debug\net8.0\Financ.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
-C:\Fullsoft\Estudos\Financ\Financ.Infrastructure\obj\Debug\net8.0\Financ.Infrastructure.AssemblyInfoInputs.cache
-C:\Fullsoft\Estudos\Financ\Financ.Infrastructure\obj\Debug\net8.0\Financ.Infrastructure.AssemblyInfo.cs
-C:\Fullsoft\Estudos\Financ\Financ.Infrastructure\obj\Debug\net8.0\Financ.Infrastructure.csproj.CoreCompileInputs.cache
-C:\Fullsoft\Estudos\Financ\Financ.Infrastructure\obj\Debug\net8.0\Financ.Infrastructure.sourcelink.json

@@ -1,17 +1,17 @@
-﻿using Financ.Domain.Entities;
+﻿using Financ.Application.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Financ.Application.DTOs.Input
+namespace Financ.Application.UseCases.Debito
 {
-    public class DebInDTO : BaseDTO
+    public class CriaDebCommand : BaseDTO
     {
-        public static explicit operator Debito(DebInDTO debito)
+        public static explicit operator Domain.Entities.Debito(CriaDebCommand debito)
         {
-            return new Debito
+            return new Domain.Entities.Debito
             {
                 Titulo = debito.Titulo,
                 Descricao = debito.Descricao,
@@ -22,3 +22,4 @@ namespace Financ.Application.DTOs.Input
         }
     }
 }
+

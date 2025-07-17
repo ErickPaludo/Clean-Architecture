@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Financ.Application.Interfaces.Repository
+namespace Financ.Application.Ports.Interfaces.Repository
 {
     public interface IBaseRepository<T> where T : class
     {

@@ -1,6 +1,7 @@
 ﻿using Financ.Application.DTOs;
 using Financ.Application.DTOs.Input;
-using Financ.Application.Interfaces.Repository.UnitOfWork;
+using Financ.Application.Ports.Interfaces.Repository.UnitOfWork;
+using Financ.Application.UseCases.Debito;
 using Financ.Domain.Entities;
 using Financ.Infrastructure.Entity;
 using Microsoft.AspNetCore.Authorization;
@@ -27,7 +28,7 @@ namespace Financ.Api.Controllers
         }
 
         [HttpPost("cadastro")]
-        public async Task<ActionResult> CadastraDebito([FromBody] DebInDTO debito)
+        public async Task<ActionResult> CadastraDebito([FromBody] CriaDebCommand debito)
         {
             //  var user = await _userManager.FindByNameAsync(User.FindFirstValue(ClaimTypes.Name)!);
             //   debito.UserId = user!.Id;

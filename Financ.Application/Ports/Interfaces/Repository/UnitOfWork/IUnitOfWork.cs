@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Financ.Application.Ports.Interfaces.Repository;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Financ.Application.Interfaces.Repository.UnitOfWork
+namespace Financ.Application.Ports.Interfaces.Repository.UnitOfWork
 {
     public interface IUnitOfWork
     {

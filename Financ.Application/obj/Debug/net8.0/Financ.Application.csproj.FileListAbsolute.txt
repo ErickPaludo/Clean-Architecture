@@ -1,16 +1,6 @@
-C:\Fullsoft\Estudos\Financ\Financ.Application\bin\Debug\net8.0\Financ.Application.deps.json
-C:\Fullsoft\Estudos\Financ\Financ.Application\bin\Debug\net8.0\Financ.Application.dll
-C:\Fullsoft\Estudos\Financ\Financ.Application\bin\Debug\net8.0\Financ.Application.pdb
-C:\Fullsoft\Estudos\Financ\Financ.Application\bin\Debug\net8.0\Financ.Domain.dll
-C:\Fullsoft\Estudos\Financ\Financ.Application\bin\Debug\net8.0\Financ.Domain.pdb
 C:\Fullsoft\Estudos\Financ\Financ.Application\obj\Debug\net8.0\Financ.Application.csproj.AssemblyReference.cache
 C:\Fullsoft\Estudos\Financ\Financ.Application\obj\Debug\net8.0\Financ.Application.GeneratedMSBuildEditorConfig.editorconfig
 C:\Fullsoft\Estudos\Financ\Financ.Application\obj\Debug\net8.0\Financ.Application.AssemblyInfoInputs.cache
 C:\Fullsoft\Estudos\Financ\Financ.Application\obj\Debug\net8.0\Financ.Application.AssemblyInfo.cs
 C:\Fullsoft\Estudos\Financ\Financ.Application\obj\Debug\net8.0\Financ.Application.csproj.CoreCompileInputs.cache
 C:\Fullsoft\Estudos\Financ\Financ.Application\obj\Debug\net8.0\Financ.Application.sourcelink.json
-C:\Fullsoft\Estudos\Financ\Financ.Application\obj\Debug\net8.0\Financ.A.45C1E9C0.Up2Date
-C:\Fullsoft\Estudos\Financ\Financ.Application\obj\Debug\net8.0\Financ.Application.dll
-C:\Fullsoft\Estudos\Financ\Financ.Application\obj\Debug\net8.0\refint\Financ.Application.dll
-C:\Fullsoft\Estudos\Financ\Financ.Application\obj\Debug\net8.0\Financ.Application.pdb
-C:\Fullsoft\Estudos\Financ\Financ.Application\obj\Debug\net8.0\ref\Financ.Application.dll
