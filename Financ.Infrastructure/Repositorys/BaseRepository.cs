@@ -1,4 +1,4 @@
-﻿using Financ.Application.Ports.Interfaces.Repository;
+﻿using Financ.Application.Repository;
 using Financ.Infrastructure.Context;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -32,9 +32,9 @@ namespace Financ.Infrastructure.Repositorys
         {
             return _context.Set<T>().AsNoTracking().Any(predicate);
         }
-        public T? Create(T userobject)
+        public async Task<T?> Create(T userobject)
         {
-            _context.Set<T>().Add(userobject);
+            await _context.Set<T>().AddAsync(userobject);
             return userobject;
 
         }

@@ -18,8 +18,4 @@
     <ProjectReference Include="..\Financ.CrossCutting\Financ.CrossCutting.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
 </Project>

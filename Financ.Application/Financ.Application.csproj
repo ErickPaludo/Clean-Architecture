@@ -10,8 +10,4 @@
     <ProjectReference Include="..\Financ.Domain\Financ.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Ports\Interfaces\Services\" />
-  </ItemGroup>
-
 </Project>

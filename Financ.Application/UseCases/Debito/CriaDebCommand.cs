@@ -19,6 +19,7 @@ namespace Financ.Application.UseCases.Debito
                 DthrReg = debito.DthrReg,
                 Status = debito.Status
             };
+          
         }
     }
 }

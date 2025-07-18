@@ -10,3 +10,15 @@ C:\Fullsoft\Estudos\Financ\Financ.Domain\obj\Debug\net8.0\Financ.Domain.dll
 C:\Fullsoft\Estudos\Financ\Financ.Domain\obj\Debug\net8.0\refint\Financ.Domain.dll
 C:\Fullsoft\Estudos\Financ\Financ.Domain\obj\Debug\net8.0\Financ.Domain.pdb
 C:\Fullsoft\Estudos\Financ\Financ.Domain\obj\Debug\net8.0\ref\Financ.Domain.dll
+C:\Projetos\Clean-Architecture\Financ.Domain\bin\Debug\net8.0\Financ.Domain.deps.json
+C:\Projetos\Clean-Architecture\Financ.Domain\bin\Debug\net8.0\Financ.Domain.dll
+C:\Projetos\Clean-Architecture\Financ.Domain\bin\Debug\net8.0\Financ.Domain.pdb
+C:\Projetos\Clean-Architecture\Financ.Domain\obj\Debug\net8.0\Financ.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos\Clean-Architecture\Financ.Domain\obj\Debug\net8.0\Financ.Domain.AssemblyInfoInputs.cache
+C:\Projetos\Clean-Architecture\Financ.Domain\obj\Debug\net8.0\Financ.Domain.AssemblyInfo.cs
+C:\Projetos\Clean-Architecture\Financ.Domain\obj\Debug\net8.0\Financ.Domain.csproj.CoreCompileInputs.cache
+C:\Projetos\Clean-Architecture\Financ.Domain\obj\Debug\net8.0\Financ.Domain.sourcelink.json
+C:\Projetos\Clean-Architecture\Financ.Domain\obj\Debug\net8.0\Financ.Domain.dll
+C:\Projetos\Clean-Architecture\Financ.Domain\obj\Debug\net8.0\refint\Financ.Domain.dll
+C:\Projetos\Clean-Architecture\Financ.Domain\obj\Debug\net8.0\Financ.Domain.pdb
+C:\Projetos\Clean-Architecture\Financ.Domain\obj\Debug\net8.0\ref\Financ.Domain.dll

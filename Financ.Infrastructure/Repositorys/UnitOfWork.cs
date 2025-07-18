@@ -1,5 +1,5 @@
-﻿using Financ.Application.Ports.Interfaces.Repository;
-using Financ.Application.Ports.Interfaces.Repository.UnitOfWork;
+﻿using Financ.Application.Repository;
+using Financ.Application.Repository.UnitOfWork;
 using Financ.Infrastructure.Context;
 using System;
 using System.Collections.Generic;

@@ -14,17 +14,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/DebInDTO"
+                "$ref": "#/components/schemas/CriaDebCommand"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/DebInDTO"
+                "$ref": "#/components/schemas/CriaDebCommand"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/DebInDTO"
+                "$ref": "#/components/schemas/CriaDebCommand"
               }
             }
           }
@@ -39,7 +39,7 @@
   },
   "components": {
     "schemas": {
-      "DebInDTO": {
+      "CriaDebCommand": {
         "required": [
           "dthrReg",
           "status",
