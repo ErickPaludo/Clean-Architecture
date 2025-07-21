@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Financ.Application.UseCases.Debito
+namespace Financ.Application.UseCases.Commands
 {
     public class CriaDebCommand : BaseDTO
     {

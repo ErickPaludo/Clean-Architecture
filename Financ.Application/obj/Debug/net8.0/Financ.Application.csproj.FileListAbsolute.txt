@@ -20,3 +20,13 @@ C:\Projetos\Clean-Architecture\Financ.Application\obj\Debug\net8.0\Financ.Applic
 C:\Projetos\Clean-Architecture\Financ.Application\obj\Debug\net8.0\refint\Financ.Application.dll
 C:\Projetos\Clean-Architecture\Financ.Application\obj\Debug\net8.0\Financ.Application.pdb
 C:\Projetos\Clean-Architecture\Financ.Application\obj\Debug\net8.0\ref\Financ.Application.dll
+C:\Fullsoft\Estudos\Financ\Financ.Application\bin\Debug\net8.0\Financ.Application.deps.json
+C:\Fullsoft\Estudos\Financ\Financ.Application\bin\Debug\net8.0\Financ.Application.dll
+C:\Fullsoft\Estudos\Financ\Financ.Application\bin\Debug\net8.0\Financ.Application.pdb
+C:\Fullsoft\Estudos\Financ\Financ.Application\bin\Debug\net8.0\Financ.Domain.dll
+C:\Fullsoft\Estudos\Financ\Financ.Application\bin\Debug\net8.0\Financ.Domain.pdb
+C:\Fullsoft\Estudos\Financ\Financ.Application\obj\Debug\net8.0\Financ.A.45C1E9C0.Up2Date
+C:\Fullsoft\Estudos\Financ\Financ.Application\obj\Debug\net8.0\Financ.Application.dll
+C:\Fullsoft\Estudos\Financ\Financ.Application\obj\Debug\net8.0\refint\Financ.Application.dll
+C:\Fullsoft\Estudos\Financ\Financ.Application\obj\Debug\net8.0\Financ.Application.pdb
+C:\Fullsoft\Estudos\Financ\Financ.Application\obj\Debug\net8.0\ref\Financ.Application.dll

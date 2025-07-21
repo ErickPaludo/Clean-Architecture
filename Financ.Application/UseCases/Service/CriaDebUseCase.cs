@@ -1,4 +1,6 @@
 ﻿using Financ.Application.Repository.UnitOfWork;
+using Financ.Application.UseCases.Commands;
+using Financ.Application.UseCases.Interfaces;
 using Financ.Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -6,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Financ.Application.UseCases.Debito
+namespace Financ.Application.UseCases.Service
 {
     public class CriaDebUseCase : ICriaDebUseCase
     {
@@ -17,7 +19,7 @@ namespace Financ.Application.UseCases.Debito
         }
         public async Task<CriaDebCommand> CriaDeb(CriaDebCommand debito)
         {
-            Domain.Entities.Debito deb = (Domain.Entities.Debito)debito;
+            Debito deb = (Debito)debito;
             await _unit.DebitoRepository.Create(deb);
             _unit.Commit();
             return debito;

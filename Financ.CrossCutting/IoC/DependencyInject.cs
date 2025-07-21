@@ -1,6 +1,7 @@
 ﻿using Financ.Application.Repository;
 using Financ.Application.Repository.UnitOfWork;
-using Financ.Application.UseCases.Debito;
+using Financ.Application.UseCases.Interfaces;
+using Financ.Application.UseCases.Service;
 using Financ.Infrastructure.Context;
 using Financ.Infrastructure.Repositorys;
 using Microsoft.EntityFrameworkCore;
