@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Financ.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250716192505_AddMigrationEntityChave3")]
-    partial class AddMigrationEntityChave3
+    [Migration("20250722145229_desativhafkdebito")]
+    partial class desativhafkdebito
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -106,15 +106,13 @@ namespace Financ.Infrastructure.Migrations
 
                     b.Property<string>("UserId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("Valor")
                         .HasPrecision(10, 2)
                         .HasColumnType("decimal(10,2)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("fnc_tb_debitos", (string)null);
                 });
@@ -412,15 +410,6 @@ namespace Financ.Infrastructure.Migrations
                 });
 
             modelBuilder.Entity("Financ.Domain.Entities.Credito", b =>
-                {
-                    b.HasOne("Financ.Infrastructure.Entity.ApplicationUser", null)
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("Financ.Domain.Entities.Debito", b =>
                 {
                     b.HasOne("Financ.Infrastructure.Entity.ApplicationUser", null)
                         .WithMany()

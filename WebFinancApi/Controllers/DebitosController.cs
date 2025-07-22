@@ -28,14 +28,14 @@ namespace Financ.Api.Controllers
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
-        public async Task<ActionResult> CadastraDebito([FromBody] CriaDebCommand debito)
+        public async Task<IActionResult> CadastraDebito([FromBody] DebitoInputDTO debito)
         {
             if (!ModelState.IsValid)
                 return BadRequest();
             //  var user = await _userManager.FindByNameAsync(User.FindFirstValue(ClaimTypes.Name)!);
             //   debito.UserId = user!.Id;
-            var processado = await _criaDebUseCase.CriaDeb(debito);
-            return Created();
+           var debitoOutDto = await _criaDebUseCase.CriarDebitoAsync((CriaDebCommand)debito);
+            return Created(string.Empty, (DebitoOutputDTO)debitoOutDto);
         }
     }
 }

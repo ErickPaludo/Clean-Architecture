@@ -1,4 +1,5 @@
 ﻿using Financ.Application.UseCases.Commands;
+using Financ.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace Financ.Application.UseCases.Interfaces
 {
-    public interface ICriaDebUseCase
+    public interface ICriaDebUseCase 
     {
-        Task<CriaDebCommand> CriaDeb(CriaDebCommand debito);
+        Task<Debito> CriarDebitoAsync(CriaDebCommand debito);
     }
 }

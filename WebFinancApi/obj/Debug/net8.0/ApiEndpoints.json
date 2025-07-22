@@ -9,7 +9,7 @@
     "Parameters": [
       {
         "Name": "debito",
-        "Type": "Financ.Application.UseCases.Commands.CriaDebCommand",
+        "Type": "Financ.Application.DTOs.DebitoInputDTO",
         "IsRequired": true
       }
     ],

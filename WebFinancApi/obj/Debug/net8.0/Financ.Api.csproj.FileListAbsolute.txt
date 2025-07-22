@@ -314,10 +314,10 @@ C:\Fullsoft\Estudos\Financ\WebFinancApi\obj\Debug\net8.0\staticwebassets\msbuild
 C:\Fullsoft\Estudos\Financ\WebFinancApi\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Financ.Api.props
 C:\Fullsoft\Estudos\Financ\WebFinancApi\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Financ.Api.props
 C:\Fullsoft\Estudos\Financ\WebFinancApi\obj\Debug\net8.0\staticwebassets.pack.json
-C:\Fullsoft\Estudos\Financ\WebFinancApi\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Fullsoft\Estudos\Financ\WebFinancApi\obj\Debug\net8.0\Financ.Api.csproj.Up2Date
 C:\Fullsoft\Estudos\Financ\WebFinancApi\obj\Debug\net8.0\Financ.Api.dll
 C:\Fullsoft\Estudos\Financ\WebFinancApi\obj\Debug\net8.0\refint\Financ.Api.dll
 C:\Fullsoft\Estudos\Financ\WebFinancApi\obj\Debug\net8.0\Financ.Api.pdb
 C:\Fullsoft\Estudos\Financ\WebFinancApi\obj\Debug\net8.0\Financ.Api.genruntimeconfig.cache
 C:\Fullsoft\Estudos\Financ\WebFinancApi\obj\Debug\net8.0\ref\Financ.Api.dll
+C:\Fullsoft\Estudos\Financ\WebFinancApi\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

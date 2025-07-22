@@ -34,9 +34,8 @@ namespace Financ.Infrastructure.Repositorys
         }
         public async Task<T?> Create(T userobject)
         {
-            await _context.Set<T>().AddAsync(userobject);
-            return userobject;
-
+           var objectCreated = await _context.Set<T>().AddAsync(userobject);
+           return objectCreated.Entity;
         }
         public T? Update(T userobject)
         {

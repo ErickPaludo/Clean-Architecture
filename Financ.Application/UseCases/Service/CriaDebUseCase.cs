@@ -17,12 +17,11 @@ namespace Financ.Application.UseCases.Service
         {
             _unit = unit;
         }
-        public async Task<CriaDebCommand> CriaDeb(CriaDebCommand debito)
-        {
-            Debito deb = (Debito)debito;
-            await _unit.DebitoRepository.Create(deb);
-            _unit.Commit();
-            return debito;
+        public async Task<Debito> CriarDebitoAsync(CriaDebCommand debito)
+        {  
+                var debCreated = await _unit.DebitoRepository.Create((Debito)debito);               
+                _unit.Commit();    
+                return debCreated!;
         }
     }
 }
