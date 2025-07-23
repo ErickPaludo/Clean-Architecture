@@ -1,7 +1,8 @@
 ﻿using Financ.Application.DTOs;
+using Financ.Application.Mappers;
 using Financ.Application.Repository.UnitOfWork;
-using Financ.Application.UseCases.Commands;
-using Financ.Application.UseCases.Interfaces;
+using Financ.Application.UseCases.Commands.Debito;
+using Financ.Application.UseCases.Interfaces.Debito;
 using Financ.Domain.Entities;
 using Financ.Infrastructure.Entity;
 using Microsoft.AspNetCore.Authorization;
@@ -18,10 +19,12 @@ namespace Financ.Api.Controllers
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly ICriaDebUseCase _criaDebUseCase;
-        public DebitosController(UserManager<ApplicationUser> userManager, ICriaDebUseCase criaDebUseCase)
+        private readonly IRetornaDebUseCase _retornaDebUseCase;
+        public DebitosController(UserManager<ApplicationUser> userManager, ICriaDebUseCase criaDebUseCase, IRetornaDebUseCase retornaDebUseCase)
         {
             _userManager = userManager;
             _criaDebUseCase = criaDebUseCase;
+            _retornaDebUseCase = retornaDebUseCase;
         }
 
         [HttpPost("cadastro")]
@@ -32,10 +35,24 @@ namespace Financ.Api.Controllers
         {
             if (!ModelState.IsValid)
                 return BadRequest();
+            var debitoOutDto = await _criaDebUseCase.CriarDebitoAsync((CriaDebCommand)debito);
+            return Created(string.Empty, DebitoMapper.ToDebitoOutputDTO(debitoOutDto));
+            #region entity framework
             //  var user = await _userManager.FindByNameAsync(User.FindFirstValue(ClaimTypes.Name)!);
             //   debito.UserId = user!.Id;
-           var debitoOutDto = await _criaDebUseCase.CriarDebitoAsync((CriaDebCommand)debito);
-            return Created(string.Empty, (DebitoOutputDTO)debitoOutDto);
+            #endregion
+        }
+        [HttpPost("retorno")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        public async Task<IActionResult> GetDebito()
+        {
+            return Ok();
+            #region entity framework
+            //  var user = await _userManager.FindByNameAsync(User.FindFirstValue(ClaimTypes.Name)!);
+            //   debito.UserId = user!.Id;
+            #endregion
         }
     }
 }

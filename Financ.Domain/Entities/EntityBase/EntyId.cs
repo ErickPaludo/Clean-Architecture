@@ -9,6 +9,12 @@ namespace Financ.Domain.Entities.EntityBase
     public abstract class EntyId
     {
         public int Id { get; private set; }
-        public string UserId { get; set; } = string.Empty;
+        public string UserId { get; private set; } = string.Empty;
+        public EntyId() { }
+        public EntyId(int id, string userId)
+        {
+            Id = id;
+            UserId = userId;
+        }
     }
 }

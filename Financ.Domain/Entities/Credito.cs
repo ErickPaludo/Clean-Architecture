@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,10 +11,16 @@ namespace Financ.Domain.Entities
 {
     public sealed class Credito : Base
     {
-        public decimal ValorIntegral { get; set; }
-        public DateTime DthrLimit { get; set; }
-        public int TotalParcelas { get; set; }
-        public ICollection<Parcela>? Parcelas { get; set; }
-
+        public decimal ValorIntegral { get; private set; }
+        public DateTime DthrLimit { get; private set; }
+        public int TotalParcelas { get; private set; }
+        public ICollection<Parcela>? Parcelas { get; private set; }
+        public Credito() { }
+        public Credito(string titulo, string descricao, decimal valor, DateTime dthrreg, string status,decimal valorIntegral,DateTime dthrLimit,int totalParcelas) : base(titulo, descricao, valor, dthrreg, status)
+        {
+            ValorIntegral= valorIntegral;
+            DthrLimit= dthrreg;
+            TotalParcelas= totalParcelas;
+        }
     }
 }
