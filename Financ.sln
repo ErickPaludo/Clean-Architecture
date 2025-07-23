@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Financ.Domain", "Financ.Dom
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Financ.Infrastructure", "Financ.Infrastructure\Financ.Infrastructure.csproj", "{23B7AF75-EFFE-4478-95B3-8543A1496448}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestFNC", "TestFNC\TestFNC.csproj", "{52CF0DDF-1FBB-4A02-9B3F-84C36D22BE34}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{23B7AF75-EFFE-4478-95B3-8543A1496448}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23B7AF75-EFFE-4478-95B3-8543A1496448}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23B7AF75-EFFE-4478-95B3-8543A1496448}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52CF0DDF-1FBB-4A02-9B3F-84C36D22BE34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52CF0DDF-1FBB-4A02-9B3F-84C36D22BE34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52CF0DDF-1FBB-4A02-9B3F-84C36D22BE34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52CF0DDF-1FBB-4A02-9B3F-84C36D22BE34}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

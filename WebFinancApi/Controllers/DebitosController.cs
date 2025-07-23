@@ -17,18 +17,17 @@ namespace Financ.Api.Controllers
     [ApiController]
     public class DebitosController : ControllerBase
     {
-        private readonly UserManager<ApplicationUser> _userManager;
         private readonly ICriaDebUseCase _criaDebUseCase;
         private readonly IRetornaDebUseCase _retornaDebUseCase;
-        public DebitosController(UserManager<ApplicationUser> userManager, ICriaDebUseCase criaDebUseCase, IRetornaDebUseCase retornaDebUseCase)
+
+        public DebitosController(ICriaDebUseCase criaDebUseCase, IRetornaDebUseCase retornaDebUseCase)
         {
-            _userManager = userManager;
             _criaDebUseCase = criaDebUseCase;
             _retornaDebUseCase = retornaDebUseCase;
         }
 
         [HttpPost("cadastro")]
-        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(typeof(DebitoOutputDTO),StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<IActionResult> CadastraDebito([FromBody] DebitoInputDTO debito)
@@ -37,23 +36,19 @@ namespace Financ.Api.Controllers
                 return BadRequest();
             DebitoOutputDTO debitoOutDto = await _criaDebUseCase.CriarDebitoAsync((CriaDebCommand)debito);
             return Created(string.Empty, debitoOutDto);
-            #region entity framework
-            //  var user = await _userManager.FindByNameAsync(User.FindFirstValue(ClaimTypes.Name)!);
-            //   debito.UserId = user!.Id;
-            #endregion
         }
         [HttpPost("retorno")]
-        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(List<DebitoOutputDTO>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<IActionResult> GetDebito()
         {
             var listDebito = _retornaDebUseCase.RetornaDebitos().Result.ToList();
             return Ok(listDebito.ToList());
+        }
             #region entity framework
             //  var user = await _userManager.FindByNameAsync(User.FindFirstValue(ClaimTypes.Name)!);
             //   debito.UserId = user!.Id;
             #endregion
-        }
     }
 }
