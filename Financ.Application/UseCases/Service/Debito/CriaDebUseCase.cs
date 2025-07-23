@@ -1,4 +1,5 @@
-﻿using Financ.Application.Mappers;
+﻿using Financ.Application.DTOs;
+using Financ.Application.Mappers;
 using Financ.Application.Repository.UnitOfWork;
 using Financ.Application.UseCases.Commands.Debito;
 using Financ.Application.UseCases.Interfaces.Debito;
@@ -18,11 +19,15 @@ namespace Financ.Application.UseCases.Service.Debito
         {
             _unit = unit;
         }
-        public async Task<Domain.Entities.Debito> CriarDebitoAsync(CriaDebCommand debito)
+        public async Task<DebitoOutputDTO> CriarDebitoAsync(CriaDebCommand debito)
         {
-            var debCreated = await _unit.DebitoRepository.Create(new Domain.Entities.Debito(debito.Titulo,debito.Descricao,debito.Valor,debito.DthrReg,debito.Status));
+            var debCreated = await _unit.DebitoRepository.Create(Financ.Domain.Entities.Debito.CriaObjetoDebito(debito.Titulo,debito.Descricao,debito.Valor,debito.DthrReg,debito.Status));
             _unit.Commit();
-            return debCreated!;
+
+            if(debCreated != null) 
+            return DebitoMapper.ToDebitoOutputDTO(debCreated)!;
+
+            throw new Exception("Erro ao criar débito, verifique os dados informados e tente novamente.");
         }
     }
 }

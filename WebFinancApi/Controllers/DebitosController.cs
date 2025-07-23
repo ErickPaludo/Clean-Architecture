@@ -35,8 +35,8 @@ namespace Financ.Api.Controllers
         {
             if (!ModelState.IsValid)
                 return BadRequest();
-            var debitoOutDto = await _criaDebUseCase.CriarDebitoAsync((CriaDebCommand)debito);
-            return Created(string.Empty, DebitoMapper.ToDebitoOutputDTO(debitoOutDto));
+            DebitoOutputDTO debitoOutDto = await _criaDebUseCase.CriarDebitoAsync((CriaDebCommand)debito);
+            return Created(string.Empty, debitoOutDto);
             #region entity framework
             //  var user = await _userManager.FindByNameAsync(User.FindFirstValue(ClaimTypes.Name)!);
             //   debito.UserId = user!.Id;
@@ -48,7 +48,8 @@ namespace Financ.Api.Controllers
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<IActionResult> GetDebito()
         {
-            return Ok();
+            var listDebito = _retornaDebUseCase.RetornaDebitos().Result.ToList();
+            return Ok(listDebito.ToList());
             #region entity framework
             //  var user = await _userManager.FindByNameAsync(User.FindFirstValue(ClaimTypes.Name)!);
             //   debito.UserId = user!.Id;
