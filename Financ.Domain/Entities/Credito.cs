@@ -16,7 +16,7 @@ namespace Financ.Domain.Entities
         public int TotalParcelas { get; private set; }
         public ICollection<Parcela>? Parcelas { get; private set; }
         public Credito() { }
-        public Credito(string titulo, string descricao, decimal valor, DateTime dthrreg, string status,decimal valorIntegral,DateTime dthrLimit,int totalParcelas) : base(titulo, descricao, valor, dthrreg, status)
+        public Credito(string titulo, string descricao, decimal valor, DateTime dthrreg, string status,decimal valorIntegral,DateTime dthrLimit,int totalParcelas,int idBanco) : base(titulo, descricao, valor, dthrreg, status, idBanco)
         {
             ValorIntegral= valorIntegral;
             DthrLimit= dthrreg;

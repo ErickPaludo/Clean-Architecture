@@ -10,6 +10,6 @@ namespace Financ.Domain.Entities
     public sealed class Saldo : Base
     {
         public Saldo() { }
-        public Saldo(string titulo, string descricao, decimal valor, DateTime dthrreg, string status) : base(titulo, descricao, valor, dthrreg, status) { }
+        public Saldo(string titulo, string descricao, decimal valor, DateTime dthrreg, string status,int idBanco) : base(titulo, descricao, valor, dthrreg, status, idBanco) { }
     }
 }

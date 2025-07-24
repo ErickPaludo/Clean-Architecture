@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -19,11 +19,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Financ.Api\Financ.Api.csproj" />
     <ProjectReference Include="..\Financ.Application\Financ.Application.csproj" />
     <ProjectReference Include="..\Financ.CrossCutting\Financ.CrossCutting.csproj" />
     <ProjectReference Include="..\Financ.Domain\Financ.Domain.csproj" />
     <ProjectReference Include="..\Financ.Infrastructure\Financ.Infrastructure.csproj" />
-    <ProjectReference Include="..\WebFinancApi\Financ.Api.csproj" />
   </ItemGroup>
 
   <ItemGroup>

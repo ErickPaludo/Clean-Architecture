@@ -10,6 +10,6 @@ namespace Financ.Application.UseCases.Interfaces.Debito
 {
     public interface IRetornaDebUseCase
     {
-        Task<IQueryable<DebitoOutputDTO>> RetornaDebitos();
+        Task<HeaderResponseDTO<List<DebitoOutputDTO>>> RetornaDebitos();
     }
 }

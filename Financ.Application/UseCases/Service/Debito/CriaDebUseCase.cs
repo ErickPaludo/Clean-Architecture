@@ -21,7 +21,7 @@ namespace Financ.Application.UseCases.Service.Debito
         }
         public async Task<DebitoOutputDTO> CriarDebitoAsync(CriaDebCommand debito)
         {
-            var debCreated = await _unit.DebitoRepository.Create(Financ.Domain.Entities.Debito.CriaObjetoDebito(debito.Titulo,debito.Descricao,debito.Valor,debito.DthrReg,debito.Status));
+            var debCreated = await _unit.DebitoRepository.Create(Financ.Domain.Entities.Debito.CriaObjetoDebito(debito.Titulo,debito.Descricao,debito.Valor,debito.DthrReg,debito.Status,debito.IdBanco));
             _unit.Commit();
 
             if(debCreated != null) 

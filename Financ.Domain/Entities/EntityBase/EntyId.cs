@@ -11,6 +11,10 @@ namespace Financ.Domain.Entities.EntityBase
         public int Id { get; private set; }
         public string UserId { get; private set; } = string.Empty;
         public EntyId() { }
+        public EntyId(int id)
+        {
+            Id = id;
+        }
         public EntyId(int id, string userId)
         {
             Id = id;

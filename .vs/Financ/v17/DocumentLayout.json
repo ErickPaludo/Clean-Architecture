@@ -1,22 +1,86 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Fullsoft\\Estudos\\Financ\\",
+  "WorkspaceRootPath": "C:\\Projetos\\Clean-Architecture\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{52CF0DDF-1FBB-4A02-9B3F-84C36D22BE34}|TestFNC\\TestFNC.csproj|c:\\fullsoft\\estudos\\financ\\testfnc\\unittests\\debito\\debitounittestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52CF0DDF-1FBB-4A02-9B3F-84C36D22BE34}|TestFNC\\TestFNC.csproj|solutionrelative:testfnc\\unittests\\debito\\debitounittestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{06BABFB1-2AB0-4142-AC84-0A536306FCAA}|Financ.Application\\Financ.Application.csproj|c:\\projetos\\clean-architecture\\financ.application\\usecases\\service\\debito\\criadebusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06BABFB1-2AB0-4142-AC84-0A536306FCAA}|Financ.Application\\Financ.Application.csproj|solutionrelative:financ.application\\usecases\\service\\debito\\criadebusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{52CF0DDF-1FBB-4A02-9B3F-84C36D22BE34}|TestFNC\\TestFNC.csproj|c:\\fullsoft\\estudos\\financ\\testfnc\\unittests\\debito\\postdebunittest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52CF0DDF-1FBB-4A02-9B3F-84C36D22BE34}|TestFNC\\TestFNC.csproj|solutionrelative:testfnc\\unittests\\debito\\postdebunittest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{06BABFB1-2AB0-4142-AC84-0A536306FCAA}|Financ.Application\\Financ.Application.csproj|c:\\projetos\\clean-architecture\\financ.application\\usecases\\interfaces\\debito\\icriadebusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06BABFB1-2AB0-4142-AC84-0A536306FCAA}|Financ.Application\\Financ.Application.csproj|solutionrelative:financ.application\\usecases\\interfaces\\debito\\icriadebusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{788024C1-DD73-433A-9335-5CD87F8359E5}|WebFinancApi\\Financ.Api.csproj|c:\\fullsoft\\estudos\\financ\\webfinancapi\\controllers\\debitoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{788024C1-DD73-433A-9335-5CD87F8359E5}|WebFinancApi\\Financ.Api.csproj|solutionrelative:webfinancapi\\controllers\\debitoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{06BABFB1-2AB0-4142-AC84-0A536306FCAA}|Financ.Application\\Financ.Application.csproj|c:\\projetos\\clean-architecture\\financ.application\\usecases\\interfaces\\debito\\iretornadebusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06BABFB1-2AB0-4142-AC84-0A536306FCAA}|Financ.Application\\Financ.Application.csproj|solutionrelative:financ.application\\usecases\\interfaces\\debito\\iretornadebusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{52CF0DDF-1FBB-4A02-9B3F-84C36D22BE34}|TestFNC\\TestFNC.csproj|c:\\fullsoft\\estudos\\financ\\testfnc\\globalusing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52CF0DDF-1FBB-4A02-9B3F-84C36D22BE34}|TestFNC\\TestFNC.csproj|solutionrelative:testfnc\\globalusing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4A84C17F-7A89-45A8-AD86-04ECD9E61003}|Financ.Api\\Financ.Api.csproj|c:\\projetos\\clean-architecture\\financ.api\\controllers\\debitoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A84C17F-7A89-45A8-AD86-04ECD9E61003}|Financ.Api\\Financ.Api.csproj|solutionrelative:financ.api\\controllers\\debitoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A84C17F-7A89-45A8-AD86-04ECD9E61003}|Financ.Api\\Financ.Api.csproj|c:\\projetos\\clean-architecture\\financ.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A84C17F-7A89-45A8-AD86-04ECD9E61003}|Financ.Api\\Financ.Api.csproj|solutionrelative:financ.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06BABFB1-2AB0-4142-AC84-0A536306FCAA}|Financ.Application\\Financ.Application.csproj|c:\\projetos\\clean-architecture\\financ.application\\usecases\\service\\debito\\retornadebusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06BABFB1-2AB0-4142-AC84-0A536306FCAA}|Financ.Application\\Financ.Application.csproj|solutionrelative:financ.application\\usecases\\service\\debito\\retornadebusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06BABFB1-2AB0-4142-AC84-0A536306FCAA}|Financ.Application\\Financ.Application.csproj|c:\\projetos\\clean-architecture\\financ.application\\mappers\\debitomapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06BABFB1-2AB0-4142-AC84-0A536306FCAA}|Financ.Application\\Financ.Application.csproj|solutionrelative:financ.application\\mappers\\debitomapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06BABFB1-2AB0-4142-AC84-0A536306FCAA}|Financ.Application\\Financ.Application.csproj|c:\\projetos\\clean-architecture\\financ.application\\dtos\\debitooutputdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06BABFB1-2AB0-4142-AC84-0A536306FCAA}|Financ.Application\\Financ.Application.csproj|solutionrelative:financ.application\\dtos\\debitooutputdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06BABFB1-2AB0-4142-AC84-0A536306FCAA}|Financ.Application\\Financ.Application.csproj|c:\\projetos\\clean-architecture\\financ.application\\dtos\\debitoinputdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06BABFB1-2AB0-4142-AC84-0A536306FCAA}|Financ.Application\\Financ.Application.csproj|solutionrelative:financ.application\\dtos\\debitoinputdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06BABFB1-2AB0-4142-AC84-0A536306FCAA}|Financ.Application\\Financ.Application.csproj|c:\\projetos\\clean-architecture\\financ.application\\dtos\\basedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06BABFB1-2AB0-4142-AC84-0A536306FCAA}|Financ.Application\\Financ.Application.csproj|solutionrelative:financ.application\\dtos\\basedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06BABFB1-2AB0-4142-AC84-0A536306FCAA}|Financ.Application\\Financ.Application.csproj|c:\\projetos\\clean-architecture\\financ.application\\usecases\\commands\\debito\\criadebcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06BABFB1-2AB0-4142-AC84-0A536306FCAA}|Financ.Application\\Financ.Application.csproj|solutionrelative:financ.application\\usecases\\commands\\debito\\criadebcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06BABFB1-2AB0-4142-AC84-0A536306FCAA}|Financ.Application\\Financ.Application.csproj|c:\\projetos\\clean-architecture\\financ.application\\usecases\\commands\\debito\\retornadebcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06BABFB1-2AB0-4142-AC84-0A536306FCAA}|Financ.Application\\Financ.Application.csproj|solutionrelative:financ.application\\usecases\\commands\\debito\\retornadebcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C5D9711-7ECC-440B-BAFD-15F3C184F344}|Financ.CrossCutting\\Financ.CrossCutting.csproj|c:\\projetos\\clean-architecture\\financ.crosscutting\\ioc\\dependencyinject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C5D9711-7ECC-440B-BAFD-15F3C184F344}|Financ.CrossCutting\\Financ.CrossCutting.csproj|solutionrelative:financ.crosscutting\\ioc\\dependencyinject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EC7AA26-704F-4DBD-A620-4863E5867F1C}|Financ.Domain\\Financ.Domain.csproj|c:\\projetos\\clean-architecture\\financ.domain\\entities\\debito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EC7AA26-704F-4DBD-A620-4863E5867F1C}|Financ.Domain\\Financ.Domain.csproj|solutionrelative:financ.domain\\entities\\debito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EC7AA26-704F-4DBD-A620-4863E5867F1C}|Financ.Domain\\Financ.Domain.csproj|c:\\projetos\\clean-architecture\\financ.domain\\entities\\entitybase\\base.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EC7AA26-704F-4DBD-A620-4863E5867F1C}|Financ.Domain\\Financ.Domain.csproj|solutionrelative:financ.domain\\entities\\entitybase\\base.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EC7AA26-704F-4DBD-A620-4863E5867F1C}|Financ.Domain\\Financ.Domain.csproj|c:\\projetos\\clean-architecture\\financ.domain\\entities\\entitybase\\entyid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EC7AA26-704F-4DBD-A620-4863E5867F1C}|Financ.Domain\\Financ.Domain.csproj|solutionrelative:financ.domain\\entities\\entitybase\\entyid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EC7AA26-704F-4DBD-A620-4863E5867F1C}|Financ.Domain\\Financ.Domain.csproj|c:\\projetos\\clean-architecture\\financ.domain\\entities\\credito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EC7AA26-704F-4DBD-A620-4863E5867F1C}|Financ.Domain\\Financ.Domain.csproj|solutionrelative:financ.domain\\entities\\credito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EC7AA26-704F-4DBD-A620-4863E5867F1C}|Financ.Domain\\Financ.Domain.csproj|c:\\projetos\\clean-architecture\\financ.domain\\entities\\parcela.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EC7AA26-704F-4DBD-A620-4863E5867F1C}|Financ.Domain\\Financ.Domain.csproj|solutionrelative:financ.domain\\entities\\parcela.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EC7AA26-704F-4DBD-A620-4863E5867F1C}|Financ.Domain\\Financ.Domain.csproj|c:\\projetos\\clean-architecture\\financ.domain\\entities\\saldo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EC7AA26-704F-4DBD-A620-4863E5867F1C}|Financ.Domain\\Financ.Domain.csproj|solutionrelative:financ.domain\\entities\\saldo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EC7AA26-704F-4DBD-A620-4863E5867F1C}|Financ.Domain\\Financ.Domain.csproj|c:\\projetos\\clean-architecture\\financ.domain\\entities\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EC7AA26-704F-4DBD-A620-4863E5867F1C}|Financ.Domain\\Financ.Domain.csproj|solutionrelative:financ.domain\\entities\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,59 +90,261 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 8,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DebitosController.cs",
+              "DocumentMoniker": "C:\\Projetos\\Clean-Architecture\\Financ.Api\\Controllers\\DebitosController.cs",
+              "RelativeDocumentMoniker": "Financ.Api\\Controllers\\DebitosController.cs",
+              "ToolTip": "C:\\Projetos\\Clean-Architecture\\Financ.Api\\Controllers\\DebitosController.cs",
+              "RelativeToolTip": "Financ.Api\\Controllers\\DebitosController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACUAAABVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T02:18:56.931Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Projetos\\Clean-Architecture\\Financ.Api\\Program.cs",
+              "RelativeDocumentMoniker": "Financ.Api\\Program.cs",
+              "ToolTip": "C:\\Projetos\\Clean-Architecture\\Financ.Api\\Program.cs",
+              "RelativeToolTip": "Financ.Api\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T02:18:54.216Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DebitoInputDTO.cs",
+              "DocumentMoniker": "C:\\Projetos\\Clean-Architecture\\Financ.Application\\DTOs\\DebitoInputDTO.cs",
+              "RelativeDocumentMoniker": "Financ.Application\\DTOs\\DebitoInputDTO.cs",
+              "ToolTip": "C:\\Projetos\\Clean-Architecture\\Financ.Application\\DTOs\\DebitoInputDTO.cs",
+              "RelativeToolTip": "Financ.Application\\DTOs\\DebitoInputDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T00:24:41.072Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "BaseDTO.cs",
+              "DocumentMoniker": "C:\\Projetos\\Clean-Architecture\\Financ.Application\\DTOs\\BaseDTO.cs",
+              "RelativeDocumentMoniker": "Financ.Application\\DTOs\\BaseDTO.cs",
+              "ToolTip": "C:\\Projetos\\Clean-Architecture\\Financ.Application\\DTOs\\BaseDTO.cs",
+              "RelativeToolTip": "Financ.Application\\DTOs\\BaseDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T00:28:02.032Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DebitoOutputDTO.cs",
+              "DocumentMoniker": "C:\\Projetos\\Clean-Architecture\\Financ.Application\\DTOs\\DebitoOutputDTO.cs",
+              "RelativeDocumentMoniker": "Financ.Application\\DTOs\\DebitoOutputDTO.cs",
+              "ToolTip": "C:\\Projetos\\Clean-Architecture\\Financ.Application\\DTOs\\DebitoOutputDTO.cs",
+              "RelativeToolTip": "Financ.Application\\DTOs\\DebitoOutputDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBYAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T01:34:06.688Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "RetornaDebCommand.cs",
+              "DocumentMoniker": "C:\\Projetos\\Clean-Architecture\\Financ.Application\\UseCases\\Commands\\Debito\\RetornaDebCommand.cs",
+              "RelativeDocumentMoniker": "Financ.Application\\UseCases\\Commands\\Debito\\RetornaDebCommand.cs",
+              "ToolTip": "C:\\Projetos\\Clean-Architecture\\Financ.Application\\UseCases\\Commands\\Debito\\RetornaDebCommand.cs",
+              "RelativeToolTip": "Financ.Application\\UseCases\\Commands\\Debito\\RetornaDebCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T01:20:05.703Z"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "DebitoUnitTestController.cs",
-              "DocumentMoniker": "C:\\Fullsoft\\Estudos\\Financ\\TestFNC\\UnitTests\\Debito\\DebitoUnitTestController.cs",
-              "RelativeDocumentMoniker": "TestFNC\\UnitTests\\Debito\\DebitoUnitTestController.cs",
-              "ToolTip": "C:\\Fullsoft\\Estudos\\Financ\\TestFNC\\UnitTests\\Debito\\DebitoUnitTestController.cs",
-              "RelativeToolTip": "TestFNC\\UnitTests\\Debito\\DebitoUnitTestController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAAADAAAAAAAAAA==",
+              "Title": "CriaDebUseCase.cs",
+              "DocumentMoniker": "C:\\Projetos\\Clean-Architecture\\Financ.Application\\UseCases\\Service\\Debito\\CriaDebUseCase.cs",
+              "RelativeDocumentMoniker": "Financ.Application\\UseCases\\Service\\Debito\\CriaDebUseCase.cs",
+              "ToolTip": "C:\\Projetos\\Clean-Architecture\\Financ.Application\\UseCases\\Service\\Debito\\CriaDebUseCase.cs",
+              "RelativeToolTip": "Financ.Application\\UseCases\\Service\\Debito\\CriaDebUseCase.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAApwBMAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-23T19:41:50.505Z",
+              "WhenOpened": "2025-07-23T01:03:14.275Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "PostDebUnitTest.cs",
-              "DocumentMoniker": "C:\\Fullsoft\\Estudos\\Financ\\TestFNC\\UnitTests\\Debito\\PostDebUnitTest.cs",
-              "RelativeDocumentMoniker": "TestFNC\\UnitTests\\Debito\\PostDebUnitTest.cs",
-              "ToolTip": "C:\\Fullsoft\\Estudos\\Financ\\TestFNC\\UnitTests\\Debito\\PostDebUnitTest.cs",
-              "RelativeToolTip": "TestFNC\\UnitTests\\Debito\\PostDebUnitTest.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAqwC4AAAAAAAAAAAAAAA==",
+              "Title": "ICriaDebUseCase.cs",
+              "DocumentMoniker": "C:\\Projetos\\Clean-Architecture\\Financ.Application\\UseCases\\Interfaces\\Debito\\ICriaDebUseCase.cs",
+              "RelativeDocumentMoniker": "Financ.Application\\UseCases\\Interfaces\\Debito\\ICriaDebUseCase.cs",
+              "ToolTip": "C:\\Projetos\\Clean-Architecture\\Financ.Application\\UseCases\\Interfaces\\Debito\\ICriaDebUseCase.cs",
+              "RelativeToolTip": "Financ.Application\\UseCases\\Interfaces\\Debito\\ICriaDebUseCase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-23T17:08:20.046Z",
+              "WhenOpened": "2025-07-23T01:09:25.42Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "GlobalUsing.cs",
-              "DocumentMoniker": "C:\\Fullsoft\\Estudos\\Financ\\TestFNC\\GlobalUsing.cs",
-              "RelativeDocumentMoniker": "TestFNC\\GlobalUsing.cs",
-              "ToolTip": "C:\\Fullsoft\\Estudos\\Financ\\TestFNC\\GlobalUsing.cs",
-              "RelativeToolTip": "TestFNC\\GlobalUsing.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAA==",
+              "DocumentIndex": 12,
+              "Title": "DependencyInject.cs",
+              "DocumentMoniker": "C:\\Projetos\\Clean-Architecture\\Financ.CrossCutting\\IoC\\DependencyInject.cs",
+              "RelativeDocumentMoniker": "Financ.CrossCutting\\IoC\\DependencyInject.cs",
+              "ToolTip": "C:\\Projetos\\Clean-Architecture\\Financ.CrossCutting\\IoC\\DependencyInject.cs",
+              "RelativeToolTip": "Financ.CrossCutting\\IoC\\DependencyInject.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-23T17:00:01.269Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-23T01:25:18.441Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "DebitosController.cs",
-              "DocumentMoniker": "C:\\Fullsoft\\Estudos\\Financ\\WebFinancApi\\Controllers\\DebitosController.cs",
-              "RelativeDocumentMoniker": "WebFinancApi\\Controllers\\DebitosController.cs",
-              "ToolTip": "C:\\Fullsoft\\Estudos\\Financ\\WebFinancApi\\Controllers\\DebitosController.cs",
-              "RelativeToolTip": "WebFinancApi\\Controllers\\DebitosController.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAgwCEAAAAIAAAAAAAAAA==",
+              "Title": "IRetornaDebUseCase.cs",
+              "DocumentMoniker": "C:\\Projetos\\Clean-Architecture\\Financ.Application\\UseCases\\Interfaces\\Debito\\IRetornaDebUseCase.cs",
+              "RelativeDocumentMoniker": "Financ.Application\\UseCases\\Interfaces\\Debito\\IRetornaDebUseCase.cs",
+              "ToolTip": "C:\\Projetos\\Clean-Architecture\\Financ.Application\\UseCases\\Interfaces\\Debito\\IRetornaDebUseCase.cs",
+              "RelativeToolTip": "Financ.Application\\UseCases\\Interfaces\\Debito\\IRetornaDebUseCase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-23T16:48:46.464Z",
+              "WhenOpened": "2025-07-23T01:19:00.078Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CriaDebCommand.cs",
+              "DocumentMoniker": "C:\\Projetos\\Clean-Architecture\\Financ.Application\\UseCases\\Commands\\Debito\\CriaDebCommand.cs",
+              "RelativeDocumentMoniker": "Financ.Application\\UseCases\\Commands\\Debito\\CriaDebCommand.cs",
+              "ToolTip": "C:\\Projetos\\Clean-Architecture\\Financ.Application\\UseCases\\Commands\\Debito\\CriaDebCommand.cs",
+              "RelativeToolTip": "Financ.Application\\UseCases\\Commands\\Debito\\CriaDebCommand.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAUwBsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T00:25:32.591Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RetornaDebUseCase.cs",
+              "DocumentMoniker": "C:\\Projetos\\Clean-Architecture\\Financ.Application\\UseCases\\Service\\Debito\\RetornaDebUseCase.cs",
+              "RelativeDocumentMoniker": "Financ.Application\\UseCases\\Service\\Debito\\RetornaDebUseCase.cs",
+              "ToolTip": "C:\\Projetos\\Clean-Architecture\\Financ.Application\\UseCases\\Service\\Debito\\RetornaDebUseCase.cs",
+              "RelativeToolTip": "Financ.Application\\UseCases\\Service\\Debito\\RetornaDebUseCase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T01:30:03.862Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DebitoMapper.cs",
+              "DocumentMoniker": "C:\\Projetos\\Clean-Architecture\\Financ.Application\\Mappers\\DebitoMapper.cs",
+              "RelativeDocumentMoniker": "Financ.Application\\Mappers\\DebitoMapper.cs",
+              "ToolTip": "C:\\Projetos\\Clean-Architecture\\Financ.Application\\Mappers\\DebitoMapper.cs",
+              "RelativeToolTip": "Financ.Application\\Mappers\\DebitoMapper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA4AAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T01:50:32.437Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Debito.cs",
+              "DocumentMoniker": "C:\\Projetos\\Clean-Architecture\\Financ.Domain\\Entities\\Debito.cs",
+              "RelativeDocumentMoniker": "Financ.Domain\\Entities\\Debito.cs",
+              "ToolTip": "C:\\Projetos\\Clean-Architecture\\Financ.Domain\\Entities\\Debito.cs",
+              "RelativeToolTip": "Financ.Domain\\Entities\\Debito.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T00:17:59.15Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Base.cs",
+              "DocumentMoniker": "C:\\Projetos\\Clean-Architecture\\Financ.Domain\\Entities\\EntityBase\\Base.cs",
+              "RelativeDocumentMoniker": "Financ.Domain\\Entities\\EntityBase\\Base.cs",
+              "ToolTip": "C:\\Projetos\\Clean-Architecture\\Financ.Domain\\Entities\\EntityBase\\Base.cs",
+              "RelativeToolTip": "Financ.Domain\\Entities\\EntityBase\\Base.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T00:51:43.215Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "EntyId.cs",
+              "DocumentMoniker": "C:\\Projetos\\Clean-Architecture\\Financ.Domain\\Entities\\EntityBase\\EntyId.cs",
+              "RelativeDocumentMoniker": "Financ.Domain\\Entities\\EntityBase\\EntyId.cs",
+              "ToolTip": "C:\\Projetos\\Clean-Architecture\\Financ.Domain\\Entities\\EntityBase\\EntyId.cs",
+              "RelativeToolTip": "Financ.Domain\\Entities\\EntityBase\\EntyId.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T00:56:07.207Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Saldo.cs",
+              "DocumentMoniker": "C:\\Projetos\\Clean-Architecture\\Financ.Domain\\Entities\\Saldo.cs",
+              "RelativeDocumentMoniker": "Financ.Domain\\Entities\\Saldo.cs",
+              "ToolTip": "C:\\Projetos\\Clean-Architecture\\Financ.Domain\\Entities\\Saldo.cs",
+              "RelativeToolTip": "Financ.Domain\\Entities\\Saldo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T00:52:45.563Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Parcela.cs",
+              "DocumentMoniker": "C:\\Projetos\\Clean-Architecture\\Financ.Domain\\Entities\\Parcela.cs",
+              "RelativeDocumentMoniker": "Financ.Domain\\Entities\\Parcela.cs",
+              "ToolTip": "C:\\Projetos\\Clean-Architecture\\Financ.Domain\\Entities\\Parcela.cs",
+              "RelativeToolTip": "Financ.Domain\\Entities\\Parcela.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T00:52:52.101Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Credito.cs",
+              "DocumentMoniker": "C:\\Projetos\\Clean-Architecture\\Financ.Domain\\Entities\\Credito.cs",
+              "RelativeDocumentMoniker": "Financ.Domain\\Entities\\Credito.cs",
+              "ToolTip": "C:\\Projetos\\Clean-Architecture\\Financ.Domain\\Entities\\Credito.cs",
+              "RelativeToolTip": "Financ.Domain\\Entities\\Credito.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAowBAAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T00:17:56.692Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Projetos\\Clean-Architecture\\Financ.Domain\\Entities\\Usuario.cs",
+              "RelativeDocumentMoniker": "Financ.Domain\\Entities\\Usuario.cs",
+              "ToolTip": "C:\\Projetos\\Clean-Architecture\\Financ.Domain\\Entities\\Usuario.cs",
+              "RelativeToolTip": "Financ.Domain\\Entities\\Usuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T00:07:24.75Z"
             }
           ]
         }

@@ -11,9 +11,9 @@ namespace Financ.Domain.Entities
     {
         public Debito() { }
 
-        public Debito(string titulo, string descricao, decimal valor, DateTime dthrreg, string status) : base(titulo, descricao, valor, dthrreg, status)
+        public Debito(string titulo, string descricao, decimal valor, DateTime dthrreg, string status,int idBanco) : base(titulo, descricao, valor, dthrreg, status,idBanco)
         { }
-        public static Debito CriaObjetoDebito(string titulo, string descricao, decimal valor, DateTime dthrreg, string status)
-        { return new Debito(titulo, descricao, valor, dthrreg, status); }
+        public static Debito CriaObjetoDebito(string titulo, string descricao, decimal valor, DateTime dthrreg, string status,int idBanco)
+        { return new Debito(titulo, descricao, valor, dthrreg, status,idBanco); }
     }
 }

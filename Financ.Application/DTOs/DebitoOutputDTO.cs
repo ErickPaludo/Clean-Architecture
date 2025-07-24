@@ -12,7 +12,6 @@ namespace Financ.Application.DTOs
     {
         public int Id { get; set; }
         public int IdFixo { get; set; }
-        public int IdBanco { get; set; }
 
         public static explicit operator DebitoOutputDTO(RetornaDebCommand debito)
         {

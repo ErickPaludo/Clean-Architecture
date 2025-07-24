@@ -33,14 +33,33 @@ namespace TestFNC.UnitTests.Debito
                 Titulo = "Teste Unitário",
                 Descricao = "Descrição do teste unitário",
                 DthrReg = DateTime.Now,
-                Status = "Pendente",
-                Valor = 100
+                Status = "N",
+                Valor = 100,
+                IdBanco = 0
             };
            var data = await _controller.CadastraDebito(novoDebito);
 
             data.GetType();
            var createdResult = data.Should().BeOfType<CreatedResult>();
            createdResult.Subject.StatusCode.Should().Be(201);
+        }
+        [Fact]
+        public async Task GetDebito_Return_BadRequest()
+        {
+            var novoDebito = new DebitoInputDTO
+            {
+                Titulo = null,
+                Descricao = "Descrição do teste unitário",
+                DthrReg = DateTime.Now,
+                Status = null,
+                Valor = 100,
+                IdBanco = 0
+            };
+            var data = await _controller.CadastraDebito(novoDebito);
+
+            data.GetType();
+            var createdResult = data.Should().BeOfType<BadRequestObjectResult>();
+            createdResult.Subject.StatusCode.Should().Be(400);
         }
     }
 }

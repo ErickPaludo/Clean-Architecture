@@ -12,7 +12,7 @@ namespace Financ.Application.DTOs
     {
         public static explicit operator CriaDebCommand(DebitoInputDTO debito)
         {
-            return new CriaDebCommand(debito.Titulo, debito.Descricao, debito.Valor, debito.DthrReg, debito.Status);
+            return new CriaDebCommand(debito.Titulo, debito.Descricao, debito.Valor, debito.DthrReg, debito.Status,debito.IdBanco);
         }
       
     }

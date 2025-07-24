@@ -11,14 +11,11 @@ namespace Financ.Application.UseCases.Commands.Debito
     {
         public int Id { get; private set; }
         public int IdFixo { get; set; }
-        public int IdBanco { get; set; }
         public RetornaDebCommand() { }
-        public RetornaDebCommand(int id, string titulo, string descricao, decimal valor, DateTime dthrReg, string status,int idFixo,int idBanco) : base(titulo, descricao, valor, dthrReg, status)
+        public RetornaDebCommand(int id, string titulo, string descricao, decimal valor, DateTime dthrReg, string status,int idFixo,int idBanco) : base(titulo, descricao, valor, dthrReg, status, idBanco)
         {
             Id = id;
             IdFixo = idFixo;
-            IdBanco = idBanco;
         }
-     
     }
 }

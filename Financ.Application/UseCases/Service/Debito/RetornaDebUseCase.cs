@@ -18,10 +18,29 @@ namespace Financ.Application.UseCases.Service.Debito
         {
             _unit = unit;
         }
-        public async Task<IQueryable<DebitoOutputDTO>> RetornaDebitos()
+        public async Task<HeaderResponseDTO<List<DebitoOutputDTO>>> RetornaDebitos()
         {
             IQueryable<Financ.Domain.Entities.Debito> listDebito = await _unit.DebitoRepository.Get();
-            return DebitoMapper.ToDebitoOutputDTOinList(listDebito);
+
+            if (listDebito is not null && listDebito.Any())
+            {
+                var teste = new HeaderResponseDTO<List<DebitoOutputDTO>>
+                {
+                    Message = "Sucess",
+                    IdBanco = listDebito.First().IdBanco,
+                    Response = DebitoMapper.ToDebitoOutputDTOinList(listDebito).ToList()
+                };
+                return teste;
+            }
+            else
+            {
+                return new HeaderResponseDTO<List<DebitoOutputDTO>>
+                {
+                    Message = "Not Found",
+                    IdBanco = null,
+                    Response = null
+                };
+            }
         }
     }
 }
