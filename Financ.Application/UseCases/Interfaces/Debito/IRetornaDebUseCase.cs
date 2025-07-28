@@ -12,5 +12,6 @@ namespace Financ.Application.UseCases.Interfaces.Debito
     public interface IRetornaDebUseCase
     {
         Task<Result<List<DebitoOutputDTO>>> RetornaDebitos();
+        Task<Result<DebitoOutputDTO>> RetornaDebitoId(int id);
     }
 }

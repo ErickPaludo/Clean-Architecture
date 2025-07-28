@@ -19,12 +19,18 @@ namespace Financ.Application.UseCases.Service.Debito
         {
             _unit = unit;
         }
+
+
         public async Task<Result<List<DebitoOutputDTO>>> RetornaDebitos()
         {
             IQueryable<Financ.Domain.Entities.Debito> listDebito = await _unit.DebitoRepository.Get();
 
                 return Result<List<DebitoOutputDTO>>.Success(DebitoMapper.ToDebitoOutputDTOinList(listDebito).ToList());
            
+        }
+        public Task<Result<DebitoOutputDTO>> RetornaDebitoId(int id)
+        {
+            throw new NotImplementedException();
         }
     }
 }
