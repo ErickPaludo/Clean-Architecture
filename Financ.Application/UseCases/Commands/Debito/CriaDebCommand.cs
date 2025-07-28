@@ -1,4 +1,5 @@
 ﻿using Financ.Application.DTOs;
+using Financ.Application.Service;
 using Financ.Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -19,7 +20,7 @@ namespace Financ.Application.UseCases.Commands.Debito
         public int IdBanco { get; private set; }
 
         public CriaDebCommand() { }
-        public CriaDebCommand(string titulo, string descricao, decimal valor, DateTime dthrReg, string status,int idBanco)
+        public CriaDebCommand(string titulo, string descricao, decimal valor, DateTime dthrReg, string status, int idBanco)
         {
             Titulo = titulo;
             Descricao = descricao;
@@ -27,19 +28,25 @@ namespace Financ.Application.UseCases.Commands.Debito
             DthrReg = dthrReg;
             Status = status;
             IdBanco = idBanco;
-            Valida();
         }
-        public void Valida()
+        public static Result<string> Valida(DebitoInputDTO debito)
         {
-            if (string.IsNullOrWhiteSpace(Titulo))
-                throw new ArgumentException("Título é obrigatório");
+            if (string.IsNullOrWhiteSpace(debito.Titulo))
+            {
+               return Result<string>.Failure("Título é obrigatório");
+            }
 
-            if (Valor <= 0)
-                throw new ArgumentException("Valor deve ser maior que zero");
+            if (debito.Valor <= 0)
+            {
+                return Result<string>.Failure("Valor deve ser maior que zero");
+            }
 
-            if (string.IsNullOrWhiteSpace(Status) && Status.Length < 1)
-                throw new ArgumentException("Staus inválido");
-            
+            if (string.IsNullOrWhiteSpace(debito.Status) && debito.Status.Length < 1)
+            {
+                return Result<string>.Failure("Staus inválido");
+            }
+
+            return Result<string>.Success("Validação OK");
         }
 
     }

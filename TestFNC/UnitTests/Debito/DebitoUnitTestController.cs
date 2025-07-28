@@ -17,7 +17,7 @@ namespace TestFNC.UnitTests.Debito
     {
         public IUnitOfWork repository;
         public static DbContextOptions<ApplicationDbContext> dbContextOptions { get; }
-        public static string connectionString = "Server=25.55.129.3,1433;Database=dbfinanc;User Id=SA;Password=PlDProjeCts2025!;TrustServerCertificate=True;";
+        public static string connectionString = "Server=100.96.1.2,1433;Database=dbfinanc;User Id=SA;Password=PlDProjeCts2025!;TrustServerCertificate=True;";
 
         static DebitoUnitTestController()
         {

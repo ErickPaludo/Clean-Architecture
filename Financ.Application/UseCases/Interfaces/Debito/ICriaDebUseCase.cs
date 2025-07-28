@@ -6,11 +6,12 @@ using System.Text;
 using System.Threading.Tasks;
 using Financ.Application.UseCases.Commands.Debito;
 using Financ.Application.DTOs;
+using Financ.Application.Service;
 
 namespace Financ.Application.UseCases.Interfaces.Debito
 {
     public interface ICriaDebUseCase
     {
-        Task<DebitoOutputDTO> CriarDebitoAsync(CriaDebCommand debito);
+        Task<Result<DebitoOutputDTO>> CriarDebitoAsync(CriaDebCommand debito);
     }
 }

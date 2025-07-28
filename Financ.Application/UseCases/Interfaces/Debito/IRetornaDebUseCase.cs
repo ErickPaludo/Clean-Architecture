@@ -1,4 +1,5 @@
 ﻿using Financ.Application.DTOs;
+using Financ.Application.Service;
 using Financ.Application.UseCases.Commands.Debito;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,6 @@ namespace Financ.Application.UseCases.Interfaces.Debito
 {
     public interface IRetornaDebUseCase
     {
-        Task<HeaderResponseDTO<List<DebitoOutputDTO>>> RetornaDebitos();
+        Task<Result<List<DebitoOutputDTO>>> RetornaDebitos();
     }
 }

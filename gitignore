@@ -1,0 +1,88 @@
+## Compilação ##
+bin/
+obj/
+[Bb]uild/
+[Bb]uild[Ll]og.*
+*.dll
+*.exe
+*.app
+*.log
+
+## Visual Studio ##
+.vscode/
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Sistema ##
+*.DS_Store
+*.AppleDouble
+*.Thumbs.db
+*.lock
+*.tmp
+
+## NuGet ##
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+project.lock.json
+project.fragment.lock.json
+
+## Testes ##
+TestResults/
+*.VisualState.xml
+*.vsp
+*.vspx
+*.coverage
+*.coveragexml
+*.log
+
+## Logs e Dump ##
+*.log
+*.dmp
+
+## Arquivos de Configuração Locais ##
+appsettings.Development.json
+secrets.json
+*.launch.json
+
+## Docker / Container ##
+.dockerignore
+docker-compose.override.yml
+
+## Rider / JetBrains ##
+.idea/
+
+## Outros ##
+*.db
+*.sqlite
+*.bak
+*.cache
+*.swp
+
+# Ignorar arquivos criados pelo Visual Studio para performance
+*.tlog
+*.idb
+*.pdb
+*.ilk
+*.cache
+
+# Arquivos específicos de build incremental
+*.ncb
+*.sbr
+
+# Publish
+publish/
+
+# Configurações pessoais
+*.userprefs
+
+# Ignore global geral
+*.orig
+*.rej
+
+# Configuração de Git (não deve ser versionada)
+.gitconfig
