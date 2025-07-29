@@ -14,6 +14,6 @@ namespace Financ.Application.Repository
         Task<T?> Create(T userobject);
         T? Update(T userobject);
         bool Delete(Expression<Func<T, bool>> predicate);
-        bool ObjectAny(Expression<Func<T, bool>> predicate);
+        Task<bool> ObjectAny(Expression<Func<T, bool>> predicate);
     }
 }

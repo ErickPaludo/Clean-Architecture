@@ -46,22 +46,12 @@ namespace Financ.Api.Controllers
 
             return BadRequest(debitoOutDto);
         }
+       
         [HttpPost("retorno")]
         [ProducesResponseType(typeof(List<DebitoOutputDTO>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
-        public async Task<IActionResult> GetDebito()
-        {
-            var listDebito = await _retornaDebUseCase.RetornaDebitos();
-            if (listDebito.Valeu is not null && listDebito?.Valeu?.Any() == true)
-                return Ok(listDebito);
-            return NotFound(listDebito);
-        }   
-        [HttpPost("retornoId/{id:int}")]
-        [ProducesResponseType(typeof(List<DebitoOutputDTO>), StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
-        public async Task<IActionResult> GetDebitoId(int id)
+        public async Task<IActionResult> GetDebitoId([FromQuery]int id)
         {
             var listDebito = await _retornaDebUseCase.RetornaDebitoId(id);
             if (listDebito.Valeu is not null)

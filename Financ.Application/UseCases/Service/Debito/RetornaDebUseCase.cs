@@ -25,12 +25,13 @@ namespace Financ.Application.UseCases.Service.Debito
         {
             IQueryable<Financ.Domain.Entities.Debito> listDebito = await _unit.DebitoRepository.Get();
 
-                return Result<List<DebitoOutputDTO>>.Success(DebitoMapper.ToDebitoOutputDTOinList(listDebito).ToList());
-           
+            return Result<List<DebitoOutputDTO>>.Success(DebitoMapper.ToDebitoOutputDTOinList(listDebito.ToList()).ToList());
+
         }
-        public Task<Result<DebitoOutputDTO>> RetornaDebitoId(int id)
+        public async Task<Result<List<DebitoOutputDTO>>> RetornaDebitoId(int id)
         {
-            throw new NotImplementedException();
+            IEnumerable<Financ.Domain.Entities.Debito> debito = (await _unit.DebitoRepository.GetObjects(x => x.Id == id))!;
+            return Result<List<DebitoOutputDTO>>.Success(DebitoMapper.ToDebitoOutputDTOinList(debito.ToList()).ToList());
         }
     }
 }

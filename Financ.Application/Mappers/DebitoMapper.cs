@@ -24,7 +24,7 @@ namespace Financ.Application.Mappers
                 Status = debito.Status
             };
         }
-        public static IQueryable<DebitoOutputDTO> ToDebitoOutputDTOinList(IQueryable<Financ.Domain.Entities.Debito> listDebito)
+        public static IQueryable<DebitoOutputDTO> ToDebitoOutputDTOinList(List<Financ.Domain.Entities.Debito> listDebito)
         {
             var listOut = new List<DebitoOutputDTO>();
             foreach (var debito in listDebito)

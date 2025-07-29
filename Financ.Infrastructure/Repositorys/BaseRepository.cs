@@ -23,14 +23,15 @@ namespace Financ.Infrastructure.Repositorys
         {
             return await _context.Set<T>().AsNoTracking().Where(predicate).ToListAsync();
         }
+    
         public async Task<IQueryable<T>> Get()
         {
             var list = await _context.Set<T>().AsNoTracking().ToListAsync();
             return list.AsQueryable();
         }
-        public bool ObjectAny(Expression<Func<T, bool>> predicate)
+        public async Task<bool> ObjectAny(Expression<Func<T, bool>> predicate)
         {
-            return _context.Set<T>().AsNoTracking().Any(predicate);
+            return await _context.Set<T>().AsNoTracking().AnyAsync(predicate);
         }
         public async Task<T?> Create(T userobject)
         {
@@ -56,5 +57,6 @@ namespace Financ.Infrastructure.Repositorys
                 return false;
             }
         }
+
     }
 }
