@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "9KPzLHrlnLI=",
+  "dgSpecHash": "DbKjbmpkABM=",
   "success": true,
   "projectFilePath": "C:\\Projetos\\Clean-Architecture\\Financ.Application\\Financ.Application.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\erick\\.nuget\\packages\\linqkit.core\\1.2.8\\linqkit.core.1.2.8.nupkg.sha512",
     "C:\\Users\\erick\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\erick\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\erick\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",

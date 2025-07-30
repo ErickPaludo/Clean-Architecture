@@ -476,7 +476,6 @@ C:\Projetos\Clean-Architecture\Financ.Api\obj\Debug\net8.0\staticwebassets\msbui
 C:\Projetos\Clean-Architecture\Financ.Api\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Financ.Api.props
 C:\Projetos\Clean-Architecture\Financ.Api\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Financ.Api.props
 C:\Projetos\Clean-Architecture\Financ.Api\obj\Debug\net8.0\staticwebassets.pack.json
-C:\Projetos\Clean-Architecture\Financ.Api\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Projetos\Clean-Architecture\Financ.Api\obj\Debug\net8.0\Financ.Api.csproj.Up2Date
 C:\Projetos\Clean-Architecture\Financ.Api\obj\Debug\net8.0\Financ.Api.dll
 C:\Projetos\Clean-Architecture\Financ.Api\obj\Debug\net8.0\refint\Financ.Api.dll
@@ -644,3 +643,5 @@ C:\Fullsoft\Estudos\Financ\Financ.Api\obj\Debug\net8.0\Financ.Api.pdb
 C:\Fullsoft\Estudos\Financ\Financ.Api\obj\Debug\net8.0\Financ.Api.genruntimeconfig.cache
 C:\Fullsoft\Estudos\Financ\Financ.Api\obj\Debug\net8.0\ref\Financ.Api.dll
 C:\Fullsoft\Estudos\Financ\Financ.Api\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Projetos\Clean-Architecture\Financ.Api\bin\Debug\net8.0\LinqKit.Core.dll
+C:\Projetos\Clean-Architecture\Financ.Api\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

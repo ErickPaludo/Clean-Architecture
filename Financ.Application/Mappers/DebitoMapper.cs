@@ -21,7 +21,8 @@ namespace Financ.Application.Mappers
                 Descricao = debito.Descricao,
                 Valor = debito.Valor,
                 DthrReg = debito.DthrReg,
-                Status = debito.Status
+                Status = debito.Status,
+                IdBanco = debito.IdBanco
             };
         }
         public static IQueryable<DebitoOutputDTO> ToDebitoOutputDTOinList(List<Financ.Domain.Entities.Debito> listDebito)

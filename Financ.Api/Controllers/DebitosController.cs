@@ -1,5 +1,6 @@
 ﻿using Financ.Application.DTOs;
 using Financ.Application.Mappers;
+using Financ.Application.Queries;
 using Financ.Application.Repository.UnitOfWork;
 using Financ.Application.Service;
 using Financ.Application.UseCases.Commands.Debito;
@@ -51,9 +52,12 @@ namespace Financ.Api.Controllers
         [ProducesResponseType(typeof(List<DebitoOutputDTO>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
-        public async Task<IActionResult> GetDebitoId([FromQuery]int id)
+        public async Task<IActionResult> GetDebitoId([FromQuery]int idBanco, [FromQuery]GetObjQuery search)
         {
-            var listDebito = await _retornaDebUseCase.RetornaDebitoId(id);
+            if(idBanco <= 0)
+                return BadRequest(Result<Debito>.Failure("Id inválido!"));
+            
+            var listDebito = await _retornaDebUseCase.RetornarDebito(idBanco,search);
             if (listDebito.Valeu is not null)
                 return Ok(listDebito);
             return NotFound(listDebito);
