@@ -22,7 +22,7 @@ namespace TestFNC.UnitTests.Debito
 
         public PostDebUnitTest(DebitoUnitTestController controller)
         {
-            var usecase = new CriaDebUseCase(controller.repository);
+            var usecase = new CreateTransectionUseCase(controller.repository);
             _controller = new DebitosController(usecase, null);
         }
         [Fact]

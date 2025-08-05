@@ -1,5 +1,4 @@
-﻿using Financ.Application.DTOs.DebitosDto;
-using Financ.Application.UseCases.Commands.Debito;
+﻿using Financ.Application.DTOs;
 using Financ.Domain.Entities;
 using System;
 using System.Collections.Generic;
