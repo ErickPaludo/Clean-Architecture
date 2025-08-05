@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Financ.Application.DTOs
+namespace Financ.Application.DTOs.DebitosDto
 {
-    public class DebitoOutputDTO : BaseDTO
+    public class TransectionOutputDTO : BaseDTO
     {
         public int Id { get; set; }
         public int IdFixo { get; set; }

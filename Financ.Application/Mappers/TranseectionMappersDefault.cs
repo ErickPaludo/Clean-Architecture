@@ -1,4 +1,4 @@
-﻿using Financ.Application.DTOs;
+﻿using Financ.Application.DTOs.DebitosDto;
 using Financ.Application.UseCases.Commands.Debito;
 using Financ.Domain.Entities;
 using System;
@@ -10,11 +10,11 @@ using System.Threading.Tasks;
 
 namespace Financ.Application.Mappers
 {
-    public static class DebitoMapper
+    public static class TranseectionMappersDefault
     {
-        public static DebitoOutputDTO ToDebitoOutputDTO(Financ.Domain.Entities.Debito debito)
+        public static TransectionOutputDTO ToDebitoOutputDTO(Financ.Domain.Entities.Debito debito)
         {
-            return new DebitoOutputDTO
+            return new TransectionOutputDTO
             {
                 Id = debito.Id,
                 Titulo = debito.Titulo,
@@ -25,9 +25,9 @@ namespace Financ.Application.Mappers
                 IdBanco = debito.IdBanco
             };
         }
-        public static IQueryable<DebitoOutputDTO> ToDebitoOutputDTOinList(List<Financ.Domain.Entities.Debito> listDebito)
+        public static IQueryable<TransectionOutputDTO> ToDebitoOutputDTOinList(List<Financ.Domain.Entities.Debito> listDebito)
         {
-            var listOut = new List<DebitoOutputDTO>();
+            var listOut = new List<TransectionOutputDTO>();
             foreach (var debito in listDebito)
             {
                 listOut.Add(ToDebitoOutputDTO(debito));

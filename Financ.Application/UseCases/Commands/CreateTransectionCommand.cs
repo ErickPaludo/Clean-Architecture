@@ -8,9 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Financ.Application.UseCases.Commands.Debito
+namespace Financ.Application.UseCases.Commands
 {
-    public class CriaDebCommand
+    public class CreateTransectionCommand
     {
         public string Titulo { get; private set; } = string.Empty;
         public string Descricao { get; private set; } = string.Empty;
@@ -19,8 +19,8 @@ namespace Financ.Application.UseCases.Commands.Debito
         public string Status { get; private set; } = string.Empty;
         public int IdBanco { get; private set; }
 
-        public CriaDebCommand() { }
-        public CriaDebCommand(string titulo, string descricao, decimal valor, DateTime dthrReg, string status, int idBanco)
+        public CreateTransectionCommand() { }
+        public CreateTransectionCommand(string titulo, string descricao, decimal valor, DateTime dthrReg, string status, int idBanco)
         {
             Titulo = titulo;
             Descricao = descricao;
@@ -29,7 +29,7 @@ namespace Financ.Application.UseCases.Commands.Debito
             Status = status;
             IdBanco = idBanco;
         }
-        public static Result<string> Valida(DebitoInputDTO debito)
+        public static Result<string> Valida(TransectionInputDTO debito)
         {
             if (string.IsNullOrWhiteSpace(debito.Titulo))
             {

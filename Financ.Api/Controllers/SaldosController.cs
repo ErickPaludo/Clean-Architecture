@@ -1,28 +1,22 @@
 ﻿using Financ.Application.DTOs;
-using Financ.Application.Mappers;
 using Financ.Application.Queries;
-using Financ.Application.Repository.UnitOfWork;
 using Financ.Application.Service;
 using Financ.Application.UseCases.Commands;
 using Financ.Application.UseCases.Interfaces.Debito;
 using Financ.Domain.Entities;
-using Financ.Infrastructure.Entity;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using System.Security.Claims;
 
 namespace Financ.Api.Controllers
 {
-    [Route("api/debito")]
+    [Route("api/[controller]")]
     [ApiController]
-    public class DebitosController : ControllerBase
+    public class SaldosController : ControllerBase
     {
-        private readonly ICreateUseCase<CreateTransectionCommand, TransectionOutputDTO> _criaDebUseCase;
-        private readonly IReturnUseCase<TransectionOutputDTO> _retornaDebUseCase;
+        private readonly ICreateUseCase<TransectionOutputDTO> _criaDebUseCase;
+        private readonly IReturnUseCase<CreateTransectionCommand, Result<TransectionOutputDTO>> _retornaDebUseCase;
 
-        public DebitosController(ICreateUseCase<CreateTransectionCommand, TransectionOutputDTO> criaDebUseCase, IReturnUseCase<TransectionOutputDTO> retornaDebUseCase)
+        public SaldosController(ICreateUseCase<TransectionOutputDTO> criaDebUseCase, IReturnUseCase<CreateTransectionCommand, Result<TransectionOutputDTO>> retornaDebUseCase)
         {
             _criaDebUseCase = criaDebUseCase;
             _retornaDebUseCase = retornaDebUseCase;
@@ -32,41 +26,35 @@ namespace Financ.Api.Controllers
         [ProducesResponseType(typeof(TransectionOutputDTO), StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
-        public async Task<IActionResult> CadastraDebito([FromBody] TransectionInputDTO debito)
+        public async Task<IActionResult> CadastroSaldo([FromBody] TransectionInputDTO debito)
         {
             if (!ModelState.IsValid)
-                return BadRequest();          
+                return BadRequest();
             Result<string> validaDebito = CreateTransectionCommand.Valida(debito);
             if (!validaDebito.IsSuccess)
             {
                 return BadRequest(validaDebito);
             }
-            CreateTransectionCommand command = (CreateTransectionCommand)debito;
-
-            Result<TransectionOutputDTO> debitoOutDto = await _criaDebUseCase.CreateTransactionHandler(command);
+            Result<TransectionOutputDTO> debitoOutDto = await _criaDebUseCase.CreateTransactionHandler((CreateTransectionCommand)debito);
             if (debitoOutDto.IsSuccess)
                 return Created(string.Empty, debitoOutDto);
 
             return BadRequest(debitoOutDto);
         }
-       
+
         [HttpPost("retorno")]
         [ProducesResponseType(typeof(List<TransectionOutputDTO>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
-        public async Task<IActionResult> GetDebitoId([FromQuery]int idBanco, [FromQuery]GetObjQuery search)
+        public async Task<IActionResult> GetSaldo([FromQuery] int idBanco, [FromQuery] GetObjQuery search)
         {
-            if(idBanco <= 0)
+            if (idBanco <= 0)
                 return BadRequest(Result<Debito>.Failure("Id inválido!"));
-            
-            var listDebito = await _retornaDebUseCase.RetornarDebito(idBanco,search);
+
+            var listDebito = await _retornaDebUseCase.RetornarDebito(idBanco, search);
             if (listDebito.Valeu is not null)
                 return Ok(listDebito);
             return NotFound(listDebito);
         }
-        #region entity framework
-        //  var user = await _userManager.FindByNameAsync(User.FindFirstValue(ClaimTypes.Name)!);
-        //   debito.UserId = user!.Id;
-        #endregion
     }
 }

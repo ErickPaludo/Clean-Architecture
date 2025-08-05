@@ -2,7 +2,7 @@
 using Financ.Application.Mappers;
 using Financ.Application.Repository.UnitOfWork;
 using Financ.Application.Service;
-using Financ.Application.UseCases.Commands.Debito;
+using Financ.Application.UseCases.Commands;
 using Financ.Application.UseCases.Interfaces.Debito;
 using Financ.Domain.Entities;
 using System;
@@ -13,22 +13,25 @@ using System.Threading.Tasks;
 
 namespace Financ.Application.UseCases.Service.Debito
 {
-    public class CriaDebUseCase : ICriaDebUseCase
+    public class CreateTransectionUseCase : ICreateUseCase<CreateTransectionCommand, TransectionOutputDTO>
     {
         private readonly IUnitOfWork _unit;
-        public CriaDebUseCase(IUnitOfWork unit)
+        public CreateTransectionUseCase(IUnitOfWork unit)
         {
             _unit = unit;
         }
-        public async Task<Result<DebitoOutputDTO>> CriarDebitoAsync(CriaDebCommand debito)
+
+      s
+
+        public async Task<Result<TransectionOutputDTO>> CriarDebitoAsync(CreateTransectionCommand debito)
         {
             var debCreated = await _unit.DebitoRepository.Create(Financ.Domain.Entities.Debito.CriaObjetoDebito(debito.Titulo, debito.Descricao, debito.Valor, debito.DthrReg, debito.Status, debito.IdBanco));
             _unit.Commit();
 
             if (debCreated != null)
-                return Result<DebitoOutputDTO>.Success(DebitoMapper.ToDebitoOutputDTO(debCreated)!);
+                return Result<TransectionOutputDTO>.Success(TranseectionMappersDefault.ToDebitoOutputDTO(debCreated)!);
              
-            return Result<DebitoOutputDTO>.Failure("Erro ao criar débito, verifique os dados informados e tente novamente.");
+            return Result<TransectionOutputDTO>.Failure("Erro ao criar débito, verifique os dados informados e tente novamente.");
         }
     }
 }

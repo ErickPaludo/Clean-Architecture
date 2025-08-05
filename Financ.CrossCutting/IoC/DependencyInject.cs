@@ -28,8 +28,8 @@ namespace Financ.CrossCutting.IoC
             services.AddScoped<IParcelaRepository, ParcelaRepository>();
             services.AddScoped<ISaldoRepository, SaldoRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
-            services.AddScoped<ICriaDebUseCase, CriaDebUseCase>();
-            services.AddScoped<IRetornaDebUseCase, RetornaDebUseCase>();
+            services.AddScoped<ICreateUseCase, CreateTransectionUseCase>();
+            services.AddScoped<IReturnUseCase, RetornaDebUseCase>();
             return services;
         }
     }

@@ -379,7 +379,6 @@ C:\Projetos\Clean-Architecture\Financ.Api\bin\Debug\net8.0\System.Composition.Ru
 C:\Projetos\Clean-Architecture\Financ.Api\bin\Debug\net8.0\System.Composition.TypedParts.dll
 C:\Projetos\Clean-Architecture\Financ.Api\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
 C:\Projetos\Clean-Architecture\Financ.Api\bin\Debug\net8.0\System.Drawing.Common.dll
-C:\Projetos\Clean-Architecture\Financ.Api\bin\Debug\net8.0\System.Formats.Asn1.dll
 C:\Projetos\Clean-Architecture\Financ.Api\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Projetos\Clean-Architecture\Financ.Api\bin\Debug\net8.0\System.Memory.Data.dll
 C:\Projetos\Clean-Architecture\Financ.Api\bin\Debug\net8.0\System.Runtime.Caching.dll
@@ -470,12 +469,6 @@ C:\Projetos\Clean-Architecture\Financ.Api\obj\Debug\net8.0\scopedcss\bundle\Fina
 C:\Projetos\Clean-Architecture\Financ.Api\obj\Debug\net8.0\staticwebassets.build.json
 C:\Projetos\Clean-Architecture\Financ.Api\obj\Debug\net8.0\staticwebassets.development.json
 C:\Projetos\Clean-Architecture\Financ.Api\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Projetos\Clean-Architecture\Financ.Api\obj\Debug\net8.0\staticwebassets\msbuild.Financ.Api.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Projetos\Clean-Architecture\Financ.Api\obj\Debug\net8.0\staticwebassets\msbuild.Financ.Api.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
-C:\Projetos\Clean-Architecture\Financ.Api\obj\Debug\net8.0\staticwebassets\msbuild.build.Financ.Api.props
-C:\Projetos\Clean-Architecture\Financ.Api\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Financ.Api.props
-C:\Projetos\Clean-Architecture\Financ.Api\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Financ.Api.props
-C:\Projetos\Clean-Architecture\Financ.Api\obj\Debug\net8.0\staticwebassets.pack.json
 C:\Projetos\Clean-Architecture\Financ.Api\obj\Debug\net8.0\Financ.Api.csproj.Up2Date
 C:\Projetos\Clean-Architecture\Financ.Api\obj\Debug\net8.0\Financ.Api.dll
 C:\Projetos\Clean-Architecture\Financ.Api\obj\Debug\net8.0\refint\Financ.Api.dll
@@ -645,3 +638,8 @@ C:\Fullsoft\Estudos\Financ\Financ.Api\obj\Debug\net8.0\ref\Financ.Api.dll
 C:\Fullsoft\Estudos\Financ\Financ.Api\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Projetos\Clean-Architecture\Financ.Api\bin\Debug\net8.0\LinqKit.Core.dll
 C:\Projetos\Clean-Architecture\Financ.Api\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Projetos\Clean-Architecture\Financ.Api\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Projetos\Clean-Architecture\Financ.Api\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Projetos\Clean-Architecture\Financ.Api\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Projetos\Clean-Architecture\Financ.Api\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Projetos\Clean-Architecture\Financ.Api\obj\Debug\net8.0\staticwebassets.build.json.cache
