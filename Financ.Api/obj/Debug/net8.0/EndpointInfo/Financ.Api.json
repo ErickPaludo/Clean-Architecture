@@ -5,10 +5,10 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/debito/cadastro": {
+    "/api/financ/registerTransection": {
       "post": {
         "tags": [
-          "Debitos"
+          "TransectionDefault"
         ],
         "requestBody": {
           "content": {
@@ -93,236 +93,24 @@
         }
       }
     },
-    "/api/debito/retorno": {
+    "/api/financ/returnTransection/{type}/{idBanco}": {
       "post": {
         "tags": [
-          "Debitos"
+          "TransectionDefault"
         ],
         "parameters": [
           {
-            "name": "idBanco",
-            "in": "query",
+            "name": "type",
+            "in": "path",
+            "required": true,
             "schema": {
-              "type": "integer",
-              "format": "int32"
+              "$ref": "#/components/schemas/TransectionType"
             }
           },
-          {
-            "name": "Id",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "Date.StartDate",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "format": "date-time"
-            }
-          },
-          {
-            "name": "Date.StartEnd",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "format": "date-time"
-            }
-          },
-          {
-            "name": "Title",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Description",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Status",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/TransectionOutputDTO"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/TransectionOutputDTO"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/TransectionOutputDTO"
-                  }
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/Saldos/cadastro": {
-      "post": {
-        "tags": [
-          "Saldos"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/TransectionInputDTO"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/TransectionInputDTO"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/TransectionInputDTO"
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Created",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/TransectionOutputDTO"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/TransectionOutputDTO"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/TransectionOutputDTO"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/Saldos/retorno": {
-      "post": {
-        "tags": [
-          "Saldos"
-        ],
-        "parameters": [
           {
             "name": "idBanco",
-            "in": "query",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -483,6 +271,7 @@
           "idBanco",
           "status",
           "titulo",
+          "type",
           "valor"
         ],
         "type": "object",
@@ -511,6 +300,9 @@
             "minLength": 1,
             "type": "string",
             "default": "N"
+          },
+          "type": {
+            "$ref": "#/components/schemas/TransectionType"
           },
           "idBanco": {
             "type": "integer",
@@ -522,9 +314,9 @@
       "TransectionOutputDTO": {
         "required": [
           "dthrReg",
-          "idBanco",
           "status",
           "titulo",
+          "type",
           "valor"
         ],
         "type": "object",
@@ -554,9 +346,8 @@
             "type": "string",
             "default": "N"
           },
-          "idBanco": {
-            "type": "integer",
-            "format": "int32"
+          "type": {
+            "$ref": "#/components/schemas/TransectionType"
           },
           "id": {
             "type": "integer",
@@ -568,6 +359,15 @@
           }
         },
         "additionalProperties": false
+      },
+      "TransectionType": {
+        "enum": [
+          0,
+          1,
+          2
+        ],
+        "type": "integer",
+        "format": "int32"
       }
     }
   }

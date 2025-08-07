@@ -20,13 +20,14 @@ namespace Financ.Domain.Entities.EntityBase
         public int IdFixo { get; private set; }
         public int IdBanco { get; private set; }
         protected Base() { }
-        public Base(string titulo, string descricao, decimal valor, DateTime dthrreg, string status,int idBanco) : base(idBanco) 
+        public Base(string titulo, string descricao, decimal valor, DateTime dthrreg, string status,int idBanco)
         {
             Titulo = titulo;
             Descricao = descricao;
             Valor = valor;
             DthrReg = dthrreg;
             Status = status;
+            IdBanco = idBanco;
         }
         public Base(int id, string userId, string titulo, string descricao, decimal valor, DateTime dthrreg, string status, int idFixo, int idBanco) : base(id, userId)
         {

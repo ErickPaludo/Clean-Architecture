@@ -1,42 +1,39 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projetos\\Clean-Architecture\\Financ.Application\\Financ.Application.csproj": {}
+    "C:\\Fullsoft\\Estudos\\Financ\\Financ.Application\\Financ.Application.csproj": {}
   },
   "projects": {
-    "C:\\Projetos\\Clean-Architecture\\Financ.Application\\Financ.Application.csproj": {
+    "C:\\Fullsoft\\Estudos\\Financ\\Financ.Application\\Financ.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projetos\\Clean-Architecture\\Financ.Application\\Financ.Application.csproj",
+        "projectUniqueName": "C:\\Fullsoft\\Estudos\\Financ\\Financ.Application\\Financ.Application.csproj",
         "projectName": "Financ.Application",
-        "projectPath": "C:\\Projetos\\Clean-Architecture\\Financ.Application\\Financ.Application.csproj",
-        "packagesPath": "C:\\Users\\erick\\.nuget\\packages\\",
-        "outputPath": "C:\\Projetos\\Clean-Architecture\\Financ.Application\\obj\\",
+        "projectPath": "C:\\Fullsoft\\Estudos\\Financ\\Financ.Application\\Financ.Application.csproj",
+        "packagesPath": "C:\\Users\\erick.paludo\\.nuget\\packages\\",
+        "outputPath": "C:\\Fullsoft\\Estudos\\Financ\\Financ.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\erick\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\erick.paludo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Projetos\\Clean-Architecture\\Financ.Domain\\Financ.Domain.csproj": {
-                "projectPath": "C:\\Projetos\\Clean-Architecture\\Financ.Domain\\Financ.Domain.csproj"
+              "C:\\Fullsoft\\Estudos\\Financ\\Financ.Domain\\Financ.Domain.csproj": {
+                "projectPath": "C:\\Fullsoft\\Estudos\\Financ\\Financ.Domain\\Financ.Domain.csproj"
               }
             }
           }
@@ -51,7 +48,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -82,35 +79,32 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Projetos\\Clean-Architecture\\Financ.Domain\\Financ.Domain.csproj": {
+    "C:\\Fullsoft\\Estudos\\Financ\\Financ.Domain\\Financ.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projetos\\Clean-Architecture\\Financ.Domain\\Financ.Domain.csproj",
+        "projectUniqueName": "C:\\Fullsoft\\Estudos\\Financ\\Financ.Domain\\Financ.Domain.csproj",
         "projectName": "Financ.Domain",
-        "projectPath": "C:\\Projetos\\Clean-Architecture\\Financ.Domain\\Financ.Domain.csproj",
-        "packagesPath": "C:\\Users\\erick\\.nuget\\packages\\",
-        "outputPath": "C:\\Projetos\\Clean-Architecture\\Financ.Domain\\obj\\",
+        "projectPath": "C:\\Fullsoft\\Estudos\\Financ\\Financ.Domain\\Financ.Domain.csproj",
+        "packagesPath": "C:\\Users\\erick.paludo\\.nuget\\packages\\",
+        "outputPath": "C:\\Fullsoft\\Estudos\\Financ\\Financ.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\erick\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\erick.paludo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -129,7 +123,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -150,7 +144,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

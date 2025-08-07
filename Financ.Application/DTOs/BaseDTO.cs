@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Financ.Domain.Enums;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
@@ -26,6 +27,6 @@ namespace Financ.Application.DTOs
         [DefaultValue("N")]
         public string Status { get; set; } = "N";
         [Required]
-        public int IdBanco { get; set; }
+        public TransectionType Type { get; set; }
     }
 }

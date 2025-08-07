@@ -20,8 +20,19 @@ namespace Financ.Application.Mappers
                 Descricao = debito.Descricao,
                 Valor = debito.Valor,
                 DthrReg = debito.DthrReg,
-                Status = debito.Status,
-                IdBanco = debito.IdBanco
+                Status = debito.Status
+            };
+        } 
+        public static TransectionOutputDTO ToSaldoOutputDTO(Financ.Domain.Entities.Saldo saldo)
+        {
+            return new TransectionOutputDTO
+            {
+                Id = saldo.Id,
+                Titulo = saldo.Titulo,
+                Descricao = saldo.Descricao,
+                Valor = saldo.Valor,
+                DthrReg = saldo.DthrReg,
+                Status = saldo.Status
             };
         }
         public static IQueryable<TransectionOutputDTO> ToDebitoOutputDTOinList(List<Financ.Domain.Entities.Debito> listDebito)
@@ -30,6 +41,15 @@ namespace Financ.Application.Mappers
             foreach (var debito in listDebito)
             {
                 listOut.Add(ToDebitoOutputDTO(debito));
+            }
+            return listOut.AsQueryable();
+        }
+        public static IQueryable<TransectionOutputDTO> ToSaldoDTOinList(List<Financ.Domain.Entities.Saldo> listSaldo)
+        {
+            var listOut = new List<TransectionOutputDTO>();
+            foreach (var saldo in listSaldo)
+            {
+                listOut.Add(ToSaldoOutputDTO(saldo));
             }
             return listOut.AsQueryable();
         }

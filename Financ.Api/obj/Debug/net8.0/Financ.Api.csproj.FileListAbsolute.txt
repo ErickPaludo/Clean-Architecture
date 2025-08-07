@@ -643,3 +643,4 @@ C:\Projetos\Clean-Architecture\Financ.Api\obj\Debug\net8.0\rjimswa.dswa.cache.js
 C:\Projetos\Clean-Architecture\Financ.Api\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
 C:\Projetos\Clean-Architecture\Financ.Api\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
 C:\Projetos\Clean-Architecture\Financ.Api\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Fullsoft\Estudos\Financ\Financ.Api\bin\Debug\net8.0\LinqKit.Core.dll

@@ -29,26 +29,26 @@ namespace Financ.Application.UseCases.Commands
             Status = status;
             IdBanco = idBanco;
         }
-        public static Result<string> Valida(TransectionInputDTO debito)
+        public static Result<string> Valida(TransectionInputDTO entity)
         {
-            if (string.IsNullOrWhiteSpace(debito.Titulo))
+            if (entity.IdBanco <= 0)
             {
-               return Result<string>.Failure("Título é obrigatório");
+                return Result<string>.Failure(entity.IdBanco,"Banco inválido!");
             }
-
-            if (debito.Valor <= 0)
+            if (string.IsNullOrWhiteSpace(entity.Titulo))
             {
-                return Result<string>.Failure("Valor deve ser maior que zero");
+               return Result<string>.Failure(entity.IdBanco,"Título é obrigatório");
             }
-
-            if (string.IsNullOrWhiteSpace(debito.Status) && debito.Status.Length < 1)
+            if (entity.Valor <= 0)
             {
-                return Result<string>.Failure("Staus inválido");
+                return Result<string>.Failure(entity.IdBanco,"Valor deve ser maior que zero");
             }
-
-            return Result<string>.Success("Validação OK");
+            if (string.IsNullOrWhiteSpace(entity.Status) && entity.Status.Length < 1)
+            {
+                return Result<string>.Failure(entity.IdBanco,"Staus inválido");
+            }
+            return Result<string>.Success(entity.IdBanco,"Validação OK");
         }
-
     }
 }
 
