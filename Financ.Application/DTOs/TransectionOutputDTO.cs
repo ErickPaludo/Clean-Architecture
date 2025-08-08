@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Financ.Application.DTOs
 {
-    public class TransectionOutputDTO : BaseDTO
+    public class TransectionOutputDTO : TransectionInputDTO
     {
         public int Id { get; set; }
         public int IdFixo { get; set; }

@@ -38,7 +38,7 @@ namespace Financ.Api.Controllers
         [ProducesResponseType(typeof(TransectionOutputDTO), StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
-        public async Task<IActionResult> Register([FromBody] TransectionInputDTO transection)
+        public async Task<IActionResult> Register([FromBody] BaseTransectionDTO<TransectionInputDTO> transection)
         {
             if (!ModelState.IsValid)
                 return BadRequest();
@@ -48,16 +48,16 @@ namespace Financ.Api.Controllers
             Result<string> validaDebito = CreateTransectionCommand.Valida(transection);
             CreateTransectionCommand command = (CreateTransectionCommand)transection;
 
-            switch (transection.Type)
+            switch (transection.TypeTransection)
             {
                 case TransectionType.Debito:
                     objTranjection = await _criaDebUseCase.CreateTransactionHandler(command, TransectionType.Debito);
                     break;
                 case TransectionType.Saldo:
-                    objTranjection = await _criaSaldoUseCase.CreateTransactionHandler(command, TransectionType.Debito);
+                    objTranjection = await _criaSaldoUseCase.CreateTransactionHandler(command, TransectionType.Saldo);
                     break;
                 default:
-                    return BadRequest("Tipo de transação não suportado.");
+                    return BadRequest(Result<string>.Failure(transection.BankId,"Tipo de transação não suportado."));
             }
 
             if (!validaDebito.IsSuccess)
@@ -91,7 +91,7 @@ namespace Financ.Api.Controllers
             }
             if (!listEntity.IsSuccess)
                 return BadRequest(listEntity);
-            if (listEntity.Valeu is not null && listEntity.Valeu.Count() > 0)
+            if (listEntity.Valeu is not null)
                 return Ok(listEntity);
 
             return NotFound(listEntity);

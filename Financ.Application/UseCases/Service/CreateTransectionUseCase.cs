@@ -25,18 +25,19 @@ namespace Financ.Application.UseCases.Service
         public async Task<Result<TransectionOutputDTO>> CreateTransactionHandler(CreateTransectionCommand valueTransection, TransectionType type)
         {
             object? entity = null;
+
             switch (type)
             {
                 case TransectionType.Debito:
                     entity = await _unit.DebitoRepository.Create(Domain.Entities.Debito.CriaObjetoDebito(valueTransection.Titulo, valueTransection.Descricao, valueTransection.Valor, valueTransection.DthrReg, valueTransection.Status, valueTransection.IdBanco));
                     _unit.Commit();
-                    return entity != null ? Result<TransectionOutputDTO>.Success(valueTransection.IdBanco,TranseectionMappersDefault.ToDebitoOutputDTO((Domain.Entities.Debito)entity)!) : Result<TransectionOutputDTO>.Failure(valueTransection.IdBanco,"Erro ao criar débito, verifique os dados informados e tente novamente.");
+                    return entity != null ? Result<TransectionOutputDTO>.Success(valueTransection.IdBanco, TranseectionMappersDefault.ToDebitoOutputDTO((Domain.Entities.Debito)entity)!) : Result<TransectionOutputDTO>.Failure(valueTransection.IdBanco, "Erro ao criar débito, verifique os dados informados e tente novamente.");
 
                 case TransectionType.Saldo:
-                    // entity = await _unit.SaldoRepository.Create(Financ.Domain.Entities.Saldo.CriaObjetoSaldo(valueTransection.Titulo, valueTransection.Descricao, valueTransection.Valor, valueTransection.DthrReg, valueTransection.Status, valueTransection.IdBanco));
-                    return null;
+                    entity = await _unit.SaldoRepository.Create(Financ.Domain.Entities.Saldo.CriaObjetoSaldo(valueTransection.Titulo, valueTransection.Descricao, valueTransection.Valor, valueTransection.DthrReg, valueTransection.Status, valueTransection.IdBanco));
+                    return entity != null ? Result<TransectionOutputDTO>.Success(valueTransection.IdBanco, TranseectionMappersDefault.ToDebitoOutputDTO((Domain.Entities.Debito)entity)!) : Result<TransectionOutputDTO>.Failure(valueTransection.IdBanco, "Erro ao criar débito, verifique os dados informados e tente novamente.");
                 default:
-                    return Result<TransectionOutputDTO>.Failure(valueTransection.IdBanco,"Tipo de transação não suportado.");
+                    return Result<TransectionOutputDTO>.Failure(valueTransection.IdBanco, "Tipo de transação não suportado.");
             }
 
         }

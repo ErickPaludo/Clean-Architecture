@@ -29,25 +29,31 @@ namespace Financ.Application.UseCases.Commands
             Status = status;
             IdBanco = idBanco;
         }
-        public static Result<string> Valida(TransectionInputDTO entity)
+
+        public static explicit operator CreateTransectionCommand(BaseTransectionDTO<TransectionInputDTO> transection)
         {
-            if (entity.IdBanco <= 0)
+            return new CreateTransectionCommand(transection.Content.Titulo, transection.Content.Descricao!, transection.Content.Valor, transection.Content.DthrReg, transection.Content.Status, transection.BankId);
+        }
+
+        public static Result<string> Valida(BaseTransectionDTO<TransectionInputDTO> entity)
+        {
+            if (entity.BankId <= 0)
             {
-                return Result<string>.Failure(entity.IdBanco,"Banco inválido!");
+                return Result<string>.Failure(entity.BankId, "Banco inválido!");
             }
-            if (string.IsNullOrWhiteSpace(entity.Titulo))
+            if (string.IsNullOrWhiteSpace(entity.Content.Titulo))
             {
-               return Result<string>.Failure(entity.IdBanco,"Título é obrigatório");
+               return Result<string>.Failure(entity.BankId, "Título é obrigatório");
             }
-            if (entity.Valor <= 0)
+            if (entity.Content.Valor <= 0)
             {
-                return Result<string>.Failure(entity.IdBanco,"Valor deve ser maior que zero");
+                return Result<string>.Failure(entity.BankId, "Valor deve ser maior que zero");
             }
-            if (string.IsNullOrWhiteSpace(entity.Status) && entity.Status.Length < 1)
+            if (string.IsNullOrWhiteSpace(entity.Content.Status) && entity.Content.Status.Length < 1)
             {
-                return Result<string>.Failure(entity.IdBanco,"Staus inválido");
+                return Result<string>.Failure(entity.BankId, "Staus inválido");
             }
-            return Result<string>.Success(entity.IdBanco,"Validação OK");
+            return Result<string>.Success(entity.BankId, "Validação OK");
         }
     }
 }

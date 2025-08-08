@@ -12,6 +12,7 @@ namespace Financ.Application.Service
     {
         public int Idbank { get; private set; }
         public bool IsSuccess { get; private set; }
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public T? Valeu { get; private set; }
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public List<string>? Errors { get; private set; }

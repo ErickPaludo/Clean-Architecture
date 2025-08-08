@@ -14,17 +14,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/TransectionInputDTO"
+                "$ref": "#/components/schemas/TransectionInputDTOBaseTransectionDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/TransectionInputDTO"
+                "$ref": "#/components/schemas/TransectionInputDTOBaseTransectionDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/TransectionInputDTO"
+                "$ref": "#/components/schemas/TransectionInputDTOBaseTransectionDTO"
               }
             }
           }
@@ -268,10 +268,8 @@
       "TransectionInputDTO": {
         "required": [
           "dthrReg",
-          "idBanco",
           "status",
           "titulo",
-          "type",
           "valor"
         ],
         "type": "object",
@@ -300,13 +298,25 @@
             "minLength": 1,
             "type": "string",
             "default": "N"
-          },
-          "type": {
-            "$ref": "#/components/schemas/TransectionType"
-          },
-          "idBanco": {
+          }
+        },
+        "additionalProperties": false
+      },
+      "TransectionInputDTOBaseTransectionDTO": {
+        "required": [
+          "bankId"
+        ],
+        "type": "object",
+        "properties": {
+          "bankId": {
             "type": "integer",
             "format": "int32"
+          },
+          "typeTransection": {
+            "$ref": "#/components/schemas/TransectionType"
+          },
+          "content": {
+            "$ref": "#/components/schemas/TransectionInputDTO"
           }
         },
         "additionalProperties": false
@@ -316,7 +326,6 @@
           "dthrReg",
           "status",
           "titulo",
-          "type",
           "valor"
         ],
         "type": "object",
@@ -345,9 +354,6 @@
             "minLength": 1,
             "type": "string",
             "default": "N"
-          },
-          "type": {
-            "$ref": "#/components/schemas/TransectionType"
           },
           "id": {
             "type": "integer",

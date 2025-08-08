@@ -11,5 +11,7 @@ namespace Financ.Domain.Entities
     {
         public Saldo() { }
         public Saldo(string titulo, string descricao, decimal valor, DateTime dthrreg, string status,int idBanco) : base(titulo, descricao, valor, dthrreg, status, idBanco) { }
+        public static Saldo CriaObjetoSaldo(string titulo, string descricao, decimal valor, DateTime dthrreg, string status, int idBanco)
+        { return new Saldo(titulo, descricao, valor, dthrreg, status, idBanco); }
     }
 }

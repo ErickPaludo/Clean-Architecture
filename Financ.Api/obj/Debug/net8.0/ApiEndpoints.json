@@ -9,7 +9,7 @@
     "Parameters": [
       {
         "Name": "transection",
-        "Type": "Financ.Application.DTOs.TransectionInputDTO",
+        "Type": "Financ.Application.DTOs.BaseTransectionDTO\u00601[[Financ.Application.DTOs.TransectionInputDTO, Financ.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "IsRequired": true
       }
     ],
