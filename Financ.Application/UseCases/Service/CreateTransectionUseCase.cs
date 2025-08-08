@@ -35,7 +35,8 @@ namespace Financ.Application.UseCases.Service
 
                 case TransectionType.Saldo:
                     entity = await _unit.SaldoRepository.Create(Financ.Domain.Entities.Saldo.CriaObjetoSaldo(valueTransection.Titulo, valueTransection.Descricao, valueTransection.Valor, valueTransection.DthrReg, valueTransection.Status, valueTransection.IdBanco));
-                    return entity != null ? Result<TransectionOutputDTO>.Success(valueTransection.IdBanco, TranseectionMappersDefault.ToDebitoOutputDTO((Domain.Entities.Debito)entity)!) : Result<TransectionOutputDTO>.Failure(valueTransection.IdBanco, "Erro ao criar débito, verifique os dados informados e tente novamente.");
+                    _unit.Commit();
+                    return entity != null ? Result<TransectionOutputDTO>.Success(valueTransection.IdBanco, TranseectionMappersDefault.ToSaldoOutputDTO((Domain.Entities.Saldo)entity)!) : Result<TransectionOutputDTO>.Failure(valueTransection.IdBanco, "Erro ao criar débito, verifique os dados informados e tente novamente.");
                 default:
                     return Result<TransectionOutputDTO>.Failure(valueTransection.IdBanco, "Tipo de transação não suportado.");
             }
