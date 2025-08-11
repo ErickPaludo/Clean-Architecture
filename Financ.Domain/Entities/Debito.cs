@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Financ.Domain.Entities
 {
-    public sealed class Debito : Base
+    public sealed class Debito : Transections
     {
         public Debito() { }
 

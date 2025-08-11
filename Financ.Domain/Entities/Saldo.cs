@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Financ.Domain.Entities
 {
-    public sealed class Saldo : Base
+    public sealed class Saldo : Transections
     {
         public Saldo() { }
         public Saldo(string titulo, string descricao, decimal valor, DateTime dthrreg, string status,int idBanco) : base(titulo, descricao, valor, dthrreg, status, idBanco) { }

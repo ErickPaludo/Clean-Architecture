@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Financ.Domain.Entities
 {
-    public sealed class Credito : Base
+    public sealed class Credito : Transections
     {
         public decimal ValorIntegral { get; private set; }
         public DateTime DthrLimit { get; private set; }
