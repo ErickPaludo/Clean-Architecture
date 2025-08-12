@@ -1,4 +1,5 @@
 ﻿using Financ.Application.Repository;
+using Financ.Domain.Interfaces.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,7 @@ namespace Financ.Application.Repository.UnitOfWork
         IDebitoRepository DebitoRepository { get; }
         IParcelaRepository ParcelaRepository { get; }
         ISaldoRepository SaldoRepository { get; }
+        IBankRepository BankRepository { get; }
         void Commit();
     }
 }

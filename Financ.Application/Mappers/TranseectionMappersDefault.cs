@@ -22,7 +22,7 @@ namespace Financ.Application.Mappers
                 DthrReg = debito.DthrReg,
                 Status = debito.Status
             };
-        } 
+        }
         public static TransectionOutputDTO ToSaldoOutputDTO(Financ.Domain.Entities.Saldo saldo)
         {
             return new TransectionOutputDTO
@@ -52,6 +52,11 @@ namespace Financ.Application.Mappers
                 listOut.Add(ToSaldoOutputDTO(saldo));
             }
             return listOut.AsQueryable();
+        }
+
+        public static BankOutputDTO ToBancoInOutput(Financ.Domain.Entities.Banco banco)
+        {
+            return new BankOutputDTO { Id = banco.Id, Status = banco.Status, Titulo = banco.Titulo };
         }
 
     }

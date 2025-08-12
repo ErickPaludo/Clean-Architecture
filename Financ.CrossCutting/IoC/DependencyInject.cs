@@ -4,6 +4,7 @@ using Financ.Application.Repository.UnitOfWork;
 using Financ.Application.UseCases.Commands;
 using Financ.Application.UseCases.Interfaces;
 using Financ.Application.UseCases.Service;
+using Financ.Domain.Interfaces.Repository;
 using Financ.Infrastructure.Context;
 using Financ.Infrastructure.Repositorys;
 using Microsoft.EntityFrameworkCore;
@@ -29,9 +30,12 @@ namespace Financ.CrossCutting.IoC
             services.AddScoped<ICreditoRepository, CreditoRepository>();
             services.AddScoped<IParcelaRepository, ParcelaRepository>();
             services.AddScoped<ISaldoRepository, SaldoRepository>();
+            services.AddScoped<IBankRepository, BankRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<ICreateUseCase<CreateTransectionCommand, TransectionOutputDTO>, CreateTransectionUseCase>();
             services.AddScoped<IReturnUseCase<TransectionOutputDTO>, ReturnTransectionUseCase>();
+            services.AddScoped<ICreateBankUseCase, CreateBankUseCase>();
+
             return services;
         }
     }

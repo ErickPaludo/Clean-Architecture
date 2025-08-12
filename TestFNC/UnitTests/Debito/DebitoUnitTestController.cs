@@ -1,5 +1,4 @@
 ﻿using Financ.Application.Repository.UnitOfWork;
-using Financ.Application.UseCases.Interfaces.Debito;
 using Financ.Infrastructure.Context;
 using Financ.Infrastructure.Entity;
 using Financ.Infrastructure.Repositorys;

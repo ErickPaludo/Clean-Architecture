@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Financ.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250724125548_descnulltrue")]
-    partial class descnulltrue
+    [Migration("20250812233904_forengkeysaldoidbanco")]
+    partial class forengkeysaldoidbanco
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -25,6 +25,32 @@ namespace Financ.Infrastructure.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("Financ.Domain.Entities.Banco", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Titulo")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("fnc_tb_banco", (string)null);
+                });
+
             modelBuilder.Entity("Financ.Domain.Entities.Credito", b =>
                 {
                     b.Property<int>("Id")
@@ -34,7 +60,6 @@ namespace Financ.Infrastructure.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Descricao")
-                        .IsRequired()
                         .HasMaxLength(800)
                         .HasColumnType("nvarchar(800)");
 
@@ -92,7 +117,6 @@ namespace Financ.Infrastructure.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Descricao")
-                        .IsRequired()
                         .HasMaxLength(800)
                         .HasColumnType("nvarchar(800)");
 
@@ -125,6 +149,8 @@ namespace Financ.Infrastructure.Migrations
                         .HasColumnType("decimal(10,2)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("IdBanco");
 
                     b.ToTable("fnc_tb_debitos", (string)null);
                 });
@@ -169,7 +195,6 @@ namespace Financ.Infrastructure.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Descricao")
-                        .IsRequired()
                         .HasMaxLength(800)
                         .HasColumnType("nvarchar(800)");
 
@@ -195,7 +220,7 @@ namespace Financ.Infrastructure.Migrations
 
                     b.Property<string>("UserId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("Valor")
                         .HasPrecision(10, 2)
@@ -203,7 +228,7 @@ namespace Financ.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("IdBanco");
 
                     b.ToTable("fnc_tb_saldos", (string)null);
                 });
@@ -436,6 +461,15 @@ namespace Financ.Infrastructure.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Financ.Domain.Entities.Debito", b =>
+                {
+                    b.HasOne("Financ.Domain.Entities.Banco", null)
+                        .WithMany()
+                        .HasForeignKey("IdBanco")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("Financ.Domain.Entities.Parcela", b =>
                 {
                     b.HasOne("Financ.Domain.Entities.Credito", "Credito")
@@ -455,9 +489,9 @@ namespace Financ.Infrastructure.Migrations
 
             modelBuilder.Entity("Financ.Domain.Entities.Saldo", b =>
                 {
-                    b.HasOne("Financ.Infrastructure.Entity.ApplicationUser", null)
+                    b.HasOne("Financ.Domain.Entities.Banco", null)
                         .WithMany()
-                        .HasForeignKey("UserId")
+                        .HasForeignKey("IdBanco")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
                 });

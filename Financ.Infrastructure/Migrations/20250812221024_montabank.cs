@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Financ.Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class desativhafkdebito : Migration
+    public partial class montabank : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -58,21 +58,18 @@ namespace Financ.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "fnc_tb_debitos",
+                name: "fnc_tb_banco",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     UserId = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Titulo = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    Descricao = table.Column<string>(type: "nvarchar(800)", maxLength: 800, nullable: false),
-                    Valor = table.Column<decimal>(type: "decimal(10,2)", precision: 10, scale: 2, nullable: false),
-                    DthrReg = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false, defaultValue: "N")
+                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_fnc_tb_debitos", x => x.Id);
+                    table.PrimaryKey("PK_fnc_tb_banco", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -192,10 +189,12 @@ namespace Financ.Infrastructure.Migrations
                     TotalParcelas = table.Column<int>(type: "int", nullable: false),
                     UserId = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Titulo = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    Descricao = table.Column<string>(type: "nvarchar(800)", maxLength: 800, nullable: false),
+                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false, defaultValue: "N"),
+                    Descricao = table.Column<string>(type: "nvarchar(800)", maxLength: 800, nullable: true),
                     Valor = table.Column<decimal>(type: "decimal(10,2)", precision: 10, scale: 2, nullable: false),
                     DthrReg = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false, defaultValue: "N")
+                    IdFixo = table.Column<int>(type: "int", nullable: false),
+                    IdBanco = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -216,10 +215,12 @@ namespace Financ.Infrastructure.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     UserId = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Titulo = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    Descricao = table.Column<string>(type: "nvarchar(800)", maxLength: 800, nullable: false),
+                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false, defaultValue: "N"),
+                    Descricao = table.Column<string>(type: "nvarchar(800)", maxLength: 800, nullable: true),
                     Valor = table.Column<decimal>(type: "decimal(10,2)", precision: 10, scale: 2, nullable: false),
                     DthrReg = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false, defaultValue: "N")
+                    IdFixo = table.Column<int>(type: "int", nullable: false),
+                    IdBanco = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -228,6 +229,32 @@ namespace Financ.Infrastructure.Migrations
                         name: "FK_fnc_tb_saldos_AspNetUsers_UserId",
                         column: x => x.UserId,
                         principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "fnc_tb_debitos",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    UserId = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Titulo = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false, defaultValue: "N"),
+                    Descricao = table.Column<string>(type: "nvarchar(800)", maxLength: 800, nullable: true),
+                    Valor = table.Column<decimal>(type: "decimal(10,2)", precision: 10, scale: 2, nullable: false),
+                    DthrReg = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    IdFixo = table.Column<int>(type: "int", nullable: false),
+                    IdBanco = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_fnc_tb_debitos", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_fnc_tb_debitos_fnc_tb_banco_IdBanco",
+                        column: x => x.IdBanco,
+                        principalTable: "fnc_tb_banco",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -305,6 +332,11 @@ namespace Financ.Infrastructure.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_fnc_tb_debitos_IdBanco",
+                table: "fnc_tb_debitos",
+                column: "IdBanco");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_fnc_tb_parcelas_CreditoId",
                 table: "fnc_tb_parcelas",
                 column: "CreditoId");
@@ -349,6 +381,9 @@ namespace Financ.Infrastructure.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
+
+            migrationBuilder.DropTable(
+                name: "fnc_tb_banco");
 
             migrationBuilder.DropTable(
                 name: "fnc_tb_creditos");

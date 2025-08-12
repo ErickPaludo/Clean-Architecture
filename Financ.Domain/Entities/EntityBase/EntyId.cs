@@ -19,6 +19,9 @@ namespace Financ.Domain.Entities.EntityBase
         {
             Id = id;
             UserId = userId;
+        }public EntyId(string userId)
+        {
+            UserId = userId;
         }
     }
 }

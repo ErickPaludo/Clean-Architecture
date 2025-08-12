@@ -1,5 +1,6 @@
 ﻿using Financ.Application.Repository;
 using Financ.Application.Repository.UnitOfWork;
+using Financ.Domain.Interfaces.Repository;
 using Financ.Infrastructure.Context;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,7 @@ namespace Financ.Infrastructure.Repositorys
         private IDebitoRepository? debitoRepository;
         private IParcelaRepository? parcelaRepository;
         private ISaldoRepository? saldoRepository;
+        private IBankRepository? bankRepository;
 
         private ApplicationDbContext _context;
         public UnitOfWork(ApplicationDbContext context)
@@ -28,7 +30,8 @@ namespace Financ.Infrastructure.Repositorys
 
         public IParcelaRepository ParcelaRepository { get { return parcelaRepository = parcelaRepository ?? new ParcelaRepository(_context); } }
 
-        public ISaldoRepository SaldoRepository { get { return saldoRepository = saldoRepository ?? new SaldoRepository(_context); } }
+        public ISaldoRepository SaldoRepository { get { return saldoRepository = saldoRepository ?? new SaldoRepository(_context); } }  
+        public IBankRepository BankRepository { get { return bankRepository = bankRepository ?? new BankRepository(_context); } }
 
         public void Commit()
         {

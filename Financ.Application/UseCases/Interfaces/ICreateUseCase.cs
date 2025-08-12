@@ -13,6 +13,6 @@ namespace Financ.Application.UseCases.Interfaces
     public interface ICreateUseCase<TCommand, TResult> where TCommand : class
                                                       where TResult : class
     {
-        Task<Result<TResult>> CreateTransactionHandler(TCommand valueTransection,TransectionType type);
+        Task<Result<TResult>> CreateTransactionHandler(TCommand valueTransection,TransectionType type,string userId);
     }
 }

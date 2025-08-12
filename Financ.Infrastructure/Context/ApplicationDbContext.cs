@@ -19,6 +19,7 @@ namespace Financ.Infrastructure.Context
         public DbSet<Saldo> Saldos { get; set; }
         public DbSet<Credito> Creditos { get; set; }
         public DbSet<Parcela> Parcelas { get; set; }
+        public DbSet<Banco> Banco { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.Entity<Debito>(entity =>
@@ -33,6 +34,7 @@ namespace Financ.Infrastructure.Context
             {
                 entity.Property(c => c.Descricao).IsRequired(false);
             });
+           
 
             base.OnModelCreating(builder);
             builder.ApplyConfigurationsFromAssembly(typeof(ApplicationDbContext)

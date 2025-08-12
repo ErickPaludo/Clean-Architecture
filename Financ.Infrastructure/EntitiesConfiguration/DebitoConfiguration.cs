@@ -23,11 +23,17 @@ namespace Financ.Infrastructure.EntitiesConfiguration
             builder.Property(p => p.DthrReg).IsRequired();
             builder.Property(p => p.UserId).IsRequired();
 
-         //   builder.HasOne<ApplicationUser>()
-         //.WithMany()
-         //.HasForeignKey(c => c.UserId)
-         //.HasPrincipalKey(u => u.Id)
-         //.OnDelete(DeleteBehavior.Restrict);
+            builder.HasOne<Banco>()
+         .WithMany()
+         .HasForeignKey(c => c.IdBanco)
+         .HasPrincipalKey(u => u.Id)
+         .OnDelete(DeleteBehavior.Restrict);
+
+            //   builder.HasOne<ApplicationUser>()
+            //.WithMany()
+            //.HasForeignKey(c => c.UserId)
+            //.HasPrincipalKey(u => u.Id)
+            //.OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

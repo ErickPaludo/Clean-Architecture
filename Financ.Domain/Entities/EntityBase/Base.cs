@@ -25,6 +25,10 @@ namespace Financ.Domain.Entities.EntityBase
         public Base(int id, string userId, string titulo,string status) : base(id, userId)
         {
             Titulo = titulo;
+        } public Base(string userId, string titulo,string status) : base(userId)
+        {
+            Titulo = titulo;
+            Status = status;
         }
     }
 }

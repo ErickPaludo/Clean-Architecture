@@ -20,17 +20,15 @@ namespace Financ.Api.Controllers
     [ApiController]
     public class TransectionDefaultController : ControllerBase
     {
-        private readonly ICreateUseCase<CreateTransectionCommand, TransectionOutputDTO> _criaDebUseCase;
+        private readonly ICreateUseCase<CreateTransectionCommand, TransectionOutputDTO> _createUseCase;
         private readonly IReturnUseCase<TransectionOutputDTO> _retornaDebUseCase;
-        private readonly ICreateUseCase<CreateTransectionCommand, TransectionOutputDTO> _criaSaldoUseCase;
         private readonly IReturnUseCase<TransectionOutputDTO> _retornaSaldoUseCase;
 
 
-        public TransectionDefaultController(ICreateUseCase<CreateTransectionCommand, TransectionOutputDTO> criaDebUseCase, IReturnUseCase<TransectionOutputDTO> retornaDebUseCase, ICreateUseCase<CreateTransectionCommand, TransectionOutputDTO> criasaldoUseCase, IReturnUseCase<TransectionOutputDTO> retornasaldoUseCase)
+        public TransectionDefaultController(ICreateUseCase<CreateTransectionCommand, TransectionOutputDTO> createDebUseCase, IReturnUseCase<TransectionOutputDTO> retornaDebUseCase, IReturnUseCase<TransectionOutputDTO> retornasaldoUseCase)
         {
-            _criaDebUseCase = criaDebUseCase;
+            _createUseCase = createDebUseCase;
             _retornaDebUseCase = retornaDebUseCase;
-            _criaSaldoUseCase = criasaldoUseCase;
             _retornaSaldoUseCase = retornasaldoUseCase;
         }
 
@@ -48,22 +46,12 @@ namespace Financ.Api.Controllers
             Result<string> validaDebito = CreateTransectionCommand.Valida(transection);
             CreateTransectionCommand command = (CreateTransectionCommand)transection;
 
-            switch (transection.TypeTransection)
-            {
-                case TransectionType.Debito:
-                    objTranjection = await _criaDebUseCase.CreateTransactionHandler(command, TransectionType.Debito);
-                    break;
-                case TransectionType.Saldo:
-                    objTranjection = await _criaSaldoUseCase.CreateTransactionHandler(command, TransectionType.Saldo);
-                    break;
-                default:
-                    return BadRequest(Result<string>.Failure(transection.BankId,"Tipo de transação não suportado."));
-            }
-
             if (!validaDebito.IsSuccess)
             {
                 return BadRequest(validaDebito);
             }
+            objTranjection = await _createUseCase.CreateTransactionHandler(command, transection.TypeTransection,"0");
+
 
             if (objTranjection != null && objTranjection.IsSuccess)
                 return Created(string.Empty, objTranjection);
@@ -71,7 +59,7 @@ namespace Financ.Api.Controllers
             return BadRequest(objTranjection);
         }
 
-        [HttpPost("returnTransection/{type}/{idBanco:int}")]
+        [HttpGet("returnTransection/{type}/{idBanco:int}")]
         [ProducesResponseType(typeof(List<TransectionOutputDTO>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
@@ -81,10 +69,10 @@ namespace Financ.Api.Controllers
             switch (type)
             {
                 case TransectionType.Debito:
-                    listEntity = await _retornaDebUseCase.GetTransection(type,idBanco, search);
+                    listEntity = await _retornaDebUseCase.GetTransection(type, idBanco, search);
                     break;
                 case TransectionType.Saldo:
-                    listEntity = await _retornaSaldoUseCase.GetTransection(type,idBanco, search);
+                    listEntity = await _retornaSaldoUseCase.GetTransection(type, idBanco, search);
                     break;
                 default:
                     return BadRequest("Tipo de transação não suportado.");
