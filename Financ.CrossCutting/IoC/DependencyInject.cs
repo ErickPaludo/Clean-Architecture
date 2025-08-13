@@ -35,6 +35,7 @@ namespace Financ.CrossCutting.IoC
             services.AddScoped<ICreateUseCase<CreateTransectionCommand, TransectionOutputDTO>, CreateTransectionUseCase>();
             services.AddScoped<IReturnUseCase<TransectionOutputDTO>, ReturnTransectionUseCase>();
             services.AddScoped<ICreateBankUseCase, CreateBankUseCase>();
+            services.AddScoped<IReturnBankUseCase, ReturnBankUseCase>();
 
             return services;
         }

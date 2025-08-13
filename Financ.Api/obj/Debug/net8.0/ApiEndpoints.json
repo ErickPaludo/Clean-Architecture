@@ -15,7 +15,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Financ.Application.DTOs.TransectionOutputDTO",
+        "Type": "Financ.Application.DTOs.BankInputDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -88,6 +88,60 @@
     ]
   },
   {
+    "ContainingType": "Financ.Api.Controllers.AcountController",
+    "Method": "Get",
+    "RelativePath": "api/financ/ReturnBank",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Title",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Status",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Financ.Application.DTOs.BankInputDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 201
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 401
+      }
+    ]
+  },
+  {
     "ContainingType": "Financ.Api.Controllers.TransectionDefaultController",
     "Method": "ReturnTransection",
     "RelativePath": "api/financ/returnTransection/{type}/{idBanco}",
@@ -106,7 +160,12 @@
         "IsRequired": true
       },
       {
-        "Name": "Id",
+        "Name": "Type",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdBanco",
         "Type": "System.Int32",
         "IsRequired": false
       },
@@ -121,12 +180,17 @@
         "IsRequired": false
       },
       {
-        "Name": "Title",
+        "Name": "Description",
         "Type": "System.String",
         "IsRequired": false
       },
       {
-        "Name": "Description",
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Title",
         "Type": "System.String",
         "IsRequired": false
       },

@@ -28,7 +28,7 @@ namespace Financ.Application.UseCases.Service
             {
                 return null;
             }
-            return TranseectionMappersDefault.ToBancoInOutput(entity);
+            return TransectionMappersDefault.ToBancoInOutput(entity);
         }
     }
 }

@@ -26,7 +26,7 @@ namespace Financ.Application.UseCases.Service.Handlers
            Domain.Entities.Saldo.CriaObjetoSaldo(command.Titulo, command.Descricao, command.Valor, command.DthrReg, command.Status, command.IdBanco));
             _unit.Commit();
             return entity != null
-                ? Result<TransectionOutputDTO>.Success(command.IdBanco, TranseectionMappersDefault.ToSaldoOutputDTO(entity)!)
+                ? Result<TransectionOutputDTO>.Success(command.IdBanco, TransectionMappersDefault.ToSaldoOutputDTO(entity)!)
                 : Result<TransectionOutputDTO>.Failure(command.IdBanco, "Erro ao criar saldo, verifique os dados informados e tente novamente.");
         }
     }

@@ -25,7 +25,7 @@ namespace Financ.Application.UseCases.Service.Handlers
                        Domain.Entities.Debito.CriaObjetoDebito(command.Titulo, command.Descricao, command.Valor, command.DthrReg, command.Status, command.IdBanco));
             _unit.Commit();
             return entity != null
-                ? Result<TransectionOutputDTO>.Success(command.IdBanco, TranseectionMappersDefault.ToDebitoOutputDTO(entity)!)
+                ? Result<TransectionOutputDTO>.Success(command.IdBanco, TransectionMappersDefault.ToDebitoOutputDTO(entity)!)
                 : Result<TransectionOutputDTO>.Failure(command.IdBanco, "Erro ao criar débito, verifique os dados informados e tente novamente.");
         }
     }

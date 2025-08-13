@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Financ.Application.Mappers
 {
-    public static class TranseectionMappersDefault
+    public static class TransectionMappersDefault
     {
         public static TransectionOutputDTO ToDebitoOutputDTO(Financ.Domain.Entities.Debito debito)
         {
@@ -58,6 +58,14 @@ namespace Financ.Application.Mappers
         {
             return new BankOutputDTO { Id = banco.Id, Status = banco.Status, Titulo = banco.Titulo };
         }
-
+        public static IQueryable<BankOutputDTO> ToBancoOutputDTOinList(IEnumerable<Financ.Domain.Entities.Banco> listBanco)
+        {
+            var listOut = new List<BankOutputDTO>();
+            foreach (var banco in listBanco)
+            {
+                listOut.Add(ToBancoInOutput(banco));
+            }
+            return listOut.AsQueryable();
+        }
     }
 }
