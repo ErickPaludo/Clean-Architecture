@@ -34,7 +34,6 @@ namespace Financ.Infrastructure.Context
             {
                 entity.Property(c => c.Descricao).IsRequired(false);
             });
-           
 
             base.OnModelCreating(builder);
             builder.ApplyConfigurationsFromAssembly(typeof(ApplicationDbContext)

@@ -1,7 +1,6 @@
 ﻿using Financ.Domain.Entities;
 using Financ.Infrastructure.Context;
 using Financ.Infrastructure.Entity;
-using Microsoft.AspNetCore.Authentication.Google;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -14,6 +13,7 @@ using Azure;
 using Microsoft.AspNetCore.Identity;
 using Financ.Application.Service;
 using Microsoft.AspNetCore.Http.HttpResults;
+using Financ.Application.DTOs;
 
 namespace Financ.Api.Controllers
 {
@@ -21,42 +21,42 @@ namespace Financ.Api.Controllers
     [ApiController]
     public class AuthController : ControllerBase
     {
-        private readonly UserManager<ApplicationDbContext> _userManager;
+        private readonly UserManager<ApplicationUser> _userManager;
 
-        public AuthController(UserManager<ApplicationDbContext> userManager)
+        public AuthController(UserManager<ApplicationUser> userManager)
         {
             _userManager = userManager;
         }
+
         [HttpPost]
         [Route("register")]
-        public async Task<IActionResult> Register([FromBody] RegisterModel model)
+        public async Task<IActionResult> Register([FromBody] UserRegistrerDTO user)
         {
-            var userExists = await _userManager.FindByNameAsync(model.Username!);
+            var userExists = await _userManager.FindByNameAsync(user.Username!);
 
             if (userExists != null)
             {
-                return BadReques(Result<string>.Failure("User already exists!"));
+                return BadRequest(Result<string>.Failure("Usuário já cadastrado"));
             }
 
-            ApplicationUser user = new()
+            ApplicationUser entity = new ApplicationUser
             {
-                Email = model.Email,
+                Email = user.Email,
                 SecurityStamp = Guid.NewGuid().ToString(),
-                UserName = model.Username,
-                PhoneNumber = model.PhoneNumber,
-                FirstName = model.FirstName,
-                Surname = model.Surname
+                UserName = user.Username,
+                PhoneNumber = user.PhoneNumber,
+                FirstName = user.FirstName,
+                Surname = user.Surname
             };
 
-            var result = await _userManager.CreateAsync(user, model.Password!);
+            var result = await _userManager.CreateAsync(entity, user.Password!);
 
             if (!result.Succeeded)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError,
-                       new Response { Status = "Error", Message = "User creation failed." });
+                return BadRequest(Result<IEnumerable<IdentityError>>.Failure(result.Errors));
             }
 
-            return Ok(new Response { Status = "Success", Message = "User created successfully!" });
+            return Ok(Result<string>.Success("Usuário criado com sucesso!"));
 
         }
 

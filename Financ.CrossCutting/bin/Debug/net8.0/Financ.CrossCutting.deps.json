@@ -1066,6 +1066,7 @@
         "dependencies": {
           "Financ.Domain": "1.0.0",
           "LinqKit.Core": "1.2.8",
+          "Microsoft.Extensions.Identity.Core": "8.0.18",
           "System.Linq": "4.3.0"
         },
         "runtime": {

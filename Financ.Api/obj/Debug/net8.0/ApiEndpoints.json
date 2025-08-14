@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "Financ.Api.Controllers.AuthController",
+    "Method": "Register",
+    "RelativePath": "api/Auth/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "Financ.Application.DTOs.UserRegistrerDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Financ.Api.Controllers.AcountController",
     "Method": "Register",
     "RelativePath": "api/financ/registerBank",
